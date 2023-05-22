@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body>
+   <!-- <nav class="sticky top-0 border border-gray-200 py-4 bg-gray-100 z-10">
+        <div class="container mx-auto flex flex-wrap items-center justify-between">
+            <a href="#" class="flex">
+            <svg class="h-10 mr-3" width="51" height="70" viewBox="0 0 51 70" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path d="M1 53H27.9022C40.6587 53 51 42.7025 51 30H24.0978C11.3412 30 1 40.2975 1 53Z" fill="#76A9FA"></path><path d="M-0.876544 32.1644L-0.876544 66.411C11.9849 66.411 22.4111 55.9847 22.4111 43.1233L22.4111 8.87674C10.1196 8.98051 0.518714 19.5571 -0.876544 32.1644Z" fill="#A4CAFE"></path><path d="M50 5H23.0978C10.3413 5 0 15.2975 0 28H26.9022C39.6588 28 50 17.7025 50 5Z" fill="#1C64F2"></path></g><defs><clipPath id="clip0"><rect width="51" height="70" fill="white"></rect></clipPath></defs></svg>
+                <span class="self-center text-lg font-semibold whitespace-nowrap">FlowBite</span>
+            </a>
+            <button data-collapse-toggle="mobile-menu" type="button" class="md:hidden ml-3 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+            <div class="hidden md:flex w-full md:w-auto" id="mobile-menu">
+            <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium item-end md:items-center">
+                <li>
+                <a href="#" class="bg-blue-700 md:bg-transparent text-white block pl-3 pr-4 py-2 md:text-blue-700 md:p-0 rounded focus:outline-none" aria-current="page">Home</a>
+                </li>
+                <li>
+                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Dropdown <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                     Dropdown menu -->
+                    <!--<div id="dropdownNavbar" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                        <ul class="py-1" aria-labelledby="dropdownLargeButton">
+                        <li>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Settings</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Earnings</a>
+                        </li>
+                        </ul>
+                        <div class="py-1">
+                        <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Sign out</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                <a href="#" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Services</a>
+                </li>
+                <li>
+                <a href="#" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Pricing</a>
+                </li>
+                <li>
+                <a href="#" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Contact</a>
+                </li>
+            </ul>
+            <div class="theme-switch-wrapper items-center md:pl-10">
+                <label class="theme-switch" for="toggle-theme">                  
+                    <input type="checkbox" id="toggle-theme" />
+                    <div class="slider round flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                    </div>
+                    </label>
+                </div>
+            </div>
+            
+        </div>
+    </nav> -->
+    <nav class="sticky top-0">
+        <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
+            <a href="https://flowbite.com" class="flex items-center">
+                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+            </a>
+            <div class="flex items-center md:order-2">
+                <a href="#" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Login</a>
+                <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Sign up</a>
+                <button data-collapse-toggle="mega-menu" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mega-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+            <div id="mega-menu" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
+                <ul class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
+                    <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-blue-600 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <button id="mega-menu-dropdown-button" data-dropdown-toggle="mega-menu-dropdown" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
+                            Company <svg aria-hidden="true" class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </button>
+                        <div id="mega-menu-dropdown" class="absolute bg-gray-100 z-10 grid hidden w-auto grid-cols-2 text-sm border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700">
+                            <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white" >
+                                <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
+                                    <li>
+                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                                            About Us
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                                            Library
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                                            Resources
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                                            Pro Version
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
+                                <ul class="space-y-4">
+                                    <li>
+                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                                            Blog
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                                            Newsletter
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                                            Playground
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                                            License
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="p-4">
+                                <ul class="space-y-4">
+                                    <li>
+                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                                            Contact Us
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                                            Support Center
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+                                            Terms
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Team</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="banner-section">
+        <div class="container mx-auto">
+            <div class="main-dev py-52 items-center">
+                <h1 class="text-7xl font-bold text-[#2A3855]">Expert <span class="ityped text-[darkgrey]"></span></h1>
+                <p class="text-primary pt-4 text-3xl">Over 10 years of experience in helping<br/> clients finding  solutions.</p>
+                <div class="flex pt-10">
+                    <a class="p-3 rounded-md bg-[#6a6a6a] text-white text-xl" href="#">Read More</a>
+                    <a class="p-3 rounded-md bg-[#6a6a6a] text-white text-xl ml-5" href="#">contact</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="exiler-section py-10">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-semibold text-[#2A3855] text-center">Welcome to the Elixir</h2>
+            <p class="text-xl text-center text-primary pt-3">Get expert consultancy and support with Elixir, an advisory firm that stand by your side always</p>
+            <div class="flex flex-col md:flex-row gap-3 py-10">
+                <div class="w-full md:w-1/2 lg:w-1/4">
+                    <div class="p-2 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-20 h-20 rounded-full border border-gray-600 mx-auto p-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
+                          </svg>
+                          <h4 class="text-[rgb(43,65,110)] text-2xl font-semibold py-2">Business Consulting</h4>
+                          <p class="text-xl text-center text-primary">Solution for every business related problems, readily and skillfully.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4">
+                    <div class="p-2 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-20 h-20 rounded-full border border-gray-600 mx-auto p-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0M3.124 7.5A8.969 8.969 0 015.292 3m13.416 0a8.969 8.969 0 012.168 4.5" />
+                          </svg>                          
+                          <h4 class="text-[rgb(43,65,110)] text-2xl font-semibold py-2">Risk Management</h4>
+                          <p class="text-xl text-center text-primary">Calculate every possible risk in your business, take control over them.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4">
+                    <div class="p-2 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-20 h-20 rounded-full border border-gray-600 mx-auto p-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                          </svg>
+                          
+                          <h4 class="text-[rgb(43,65,110)] text-2xl font-semibold py-2">Market Research</h4>
+                          <p class="text-xl text-center text-primary">Know the market before taking any step, reduce risks before you go.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4">
+                    <div class="p-2 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-20 h-20 rounded-full border border-gray-600 mx-auto p-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
+                          </svg>
+                          <h4 class="text-[rgb(43,65,110)] text-2xl font-semibold py-2">Quality Services</h4>
+                          <p class="text-xl text-center text-primary">Experience unparalleled service, from beginning to final construction.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- video-section -->
+            <div class="screenvideo-image relative py-6">
+                <img class="rounded-lg" src="images/video-screenshot-2.jpg" alt="video-screenshot-2"> 
+                <button class=" rounded-full border border-gray-600 p-6 bg-white shadow-2xl absolute top-[50%] left-[50%]">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                      </svg>
+                </button>       
+            </div>
+            <div class="flex flex-col md:flex-row gap-6">
+                <div class="w-full md:w-1/2 lg:w-1/3 p-2">
+                    <div class="icon-head">
+                        <div class="flex items-center justify-center md:justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 pr-4">
+                                <path fill-rule="evenodd" d="M8.25 6.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM15.75 9.75a3 3 0 116 0 3 3 0 01-6 0zM2.25 9.75a3 3 0 116 0 3 3 0 01-6 0zM6.31 15.117A6.745 6.745 0 0112 12a6.745 6.745 0 016.709 7.498.75.75 0 01-.372.568A12.696 12.696 0 0112 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 01-.372-.568 6.787 6.787 0 011.019-4.38z" clip-rule="evenodd" />
+                                <path d="M5.082 14.254a8.287 8.287 0 00-1.308 5.135 9.687 9.687 0 01-1.764-.44l-.115-.04a.563.563 0 01-.373-.487l-.01-.121a3.75 3.75 0 013.57-4.047zM20.226 19.389a8.287 8.287 0 00-1.308-5.135 3.75 3.75 0 013.57 4.047l-.01.121a.563.563 0 01-.373.486l-.115.04c-.567.2-1.156.349-1.764.441z" />
+                              </svg>
+                              
+                              <h4 class="text-[rgb(43,65,110)] text-2xl py-2 font-semibold">Awesome Team</h4>
+                        </div>
+                          <p class="text-xl text-center md:text-left text-primary">Before talking destination, we shine a spotlight across your organization to fully understand it.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 p-2">
+                    <div class="icon-head">
+                        <div class="flex items-center justify-center md:justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 pr-4">
+                                <path d="M4.913 2.658c2.075-.27 4.19-.408 6.337-.408 2.147 0 4.262.139 6.337.408 1.922.25 3.291 1.861 3.405 3.727a4.403 4.403 0 00-1.032-.211 50.89 50.89 0 00-8.42 0c-2.358.196-4.04 2.19-4.04 4.434v4.286a4.47 4.47 0 002.433 3.984L7.28 21.53A.75.75 0 016 21v-4.03a48.527 48.527 0 01-1.087-.128C2.905 16.58 1.5 14.833 1.5 12.862V6.638c0-1.97 1.405-3.718 3.413-3.979z" />
+                                <path d="M15.75 7.5c-1.376 0-2.739.057-4.086.169C10.124 7.797 9 9.103 9 10.609v4.285c0 1.507 1.128 2.814 2.67 2.94 1.243.102 2.5.157 3.768.165l2.782 2.781a.75.75 0 001.28-.53v-2.39l.33-.026c1.542-.125 2.67-1.433 2.67-2.94v-4.286c0-1.505-1.125-2.811-2.664-2.94A49.392 49.392 0 0015.75 7.5z" />
+                              </svg>
+                              
+                              </svg>
+                              <h4 class="text-[rgb(43,65,110)] text-2xl py-2 font-semibold">Excellent Support</h4>
+                        </div>
+                          <p class="text-xl text-center md:text-left text-primary">If you face any trouble, you can always let our dedicated support team help you. They are ready for you 24/7.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 p-2">
+                    <div class="icon-head">
+                        <div class="flex items-center justify-center md:justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 pr-4">
+                                <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clip-rule="evenodd" />
+                              </svg>                              
+                              <h4 class="text-[rgb(43,65,110)] text-2xl py-2 font-semibold">Faster Performance</h4>
+                        </div>
+                          <p class="text-xl text-center md:text-left text-primary">We develop a systematic well-ordered process of analysis, from concept through implementation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <section class="service-section py-10">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-semibold text-[#2A3855] text-center py-2 relative">Services</h2>
+            <div class="head-underline w-[125px] h-[5px] bg-black mx-auto mb-10"></div>
+            <div class="flex flex-col md:flex-row">
+                <div class="w-full md:w-1/2">
+                    <div class="imagess">
+                        <img src="images/6.jpg" alt="service-image">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 my-auto">
+                    <div class="content p-6">
+                        <h4 class="text-[rgb(43,65,110)] text-4xl py-2 font-semibold">Business Consulting</h4>
+                          <p class="text-xl text-primary py-4">As one of the world’s largest accountancy networks, elixir helps a diverse range of clients with a diverse range of needs.This is especially true of our Advisory Practice, which provides corporate finance and transaction services, business restructuring.</p>
+                          <div class="flex items-center">
+                            <a class="text-xl text-gray-600 cursor-pointer" href="#">Learn More<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block ml-3">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                              </svg></a>
+                          </div>      
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row">   
+                <div class="w-full md:w-1/2 my-auto">
+                    <div class="content p-6">
+                        <h4 class="text-[rgb(43,65,110)] text-4xl py-2 font-semibold">Tax consulting</h4>
+                          <p class="text-xl text-primary py-4">Elixir serves clients across the country and around the world as they navigate an increasingly complex tax landscape. Our tax professionals draw on deep experience and industry-specific knowledge to deliver clients the insights and innovation they need.</p>
+                          <div class="flex items-center">
+                            <a class="text-xl text-gray-600 cursor-pointer" href="#">Learn More<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block ml-3">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                              </svg></a>
+                          </div>      
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <div class="imagess">
+                        <img src="images/6.jpg" alt="service-image">
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row">
+                <div class="w-full md:w-1/2">
+                    <div class="imagess">
+                        <img src="images/6.jpg" alt="service-image">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 my-auto">
+                    <div class="content p-6">
+                        <h4 class="text-[rgb(43,65,110)] text-4xl py-2 font-semibold">Advisory</h4>
+                          <p class="text-xl text-primary py-4">To help you understand what this road looks like, we surveyed 1165 digital marketers across Europe and North America to explore current trends and priorities in digital marketing.
+                          </p>
+                          <div class="flex items-center">
+                            <a class="text-xl text-gray-600 cursor-pointer" href="#">Learn More<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block ml-3">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                              </svg></a>
+                          </div>      
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-6 py-10">
+                <div class="w-full md:w-1/2 lg:w-1/3 p-2">
+                    <div class="icon-head">
+                        <div class="flex items-center justify-center md:justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 pr-4">
+                                <path fill-rule="evenodd" d="M4.5 2.25a.75.75 0 000 1.5v16.5h-.75a.75.75 0 000 1.5h16.5a.75.75 0 000-1.5h-.75V3.75a.75.75 0 000-1.5h-15zM9 6a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H9zm-.75 3.75A.75.75 0 019 9h1.5a.75.75 0 010 1.5H9a.75.75 0 01-.75-.75zM9 12a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H9zm3.75-5.25A.75.75 0 0113.5 6H15a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zM13.5 9a.75.75 0 000 1.5H15A.75.75 0 0015 9h-1.5zm-.75 3.75a.75.75 0 01.75-.75H15a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zM9 19.5v-2.25a.75.75 0 01.75-.75h4.5a.75.75 0 01.75.75v2.25a.75.75 0 01-.75.75h-4.5A.75.75 0 019 19.5z" clip-rule="evenodd" />
+                              </svg>
+                              
+                              
+                              <h4 class="text-[rgb(43,65,110)] text-2xl py-2 font-semibold">Special financing</h4>
+                        </div>
+                          <p class="text-xl text-center md:text-left text-primary">Apply for special financial support and earn exclusive rewards.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 p-2">
+                    <div class="icon-head">
+                        <div class="flex items-center justify-center md:justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 pr-4">
+                                <path d="M4.913 2.658c2.075-.27 4.19-.408 6.337-.408 2.147 0 4.262.139 6.337.408 1.922.25 3.291 1.861 3.405 3.727a4.403 4.403 0 00-1.032-.211 50.89 50.89 0 00-8.42 0c-2.358.196-4.04 2.19-4.04 4.434v4.286a4.47 4.47 0 002.433 3.984L7.28 21.53A.75.75 0 016 21v-4.03a48.527 48.527 0 01-1.087-.128C2.905 16.58 1.5 14.833 1.5 12.862V6.638c0-1.97 1.405-3.718 3.413-3.979z" />
+                                <path d="M15.75 7.5c-1.376 0-2.739.057-4.086.169C10.124 7.797 9 9.103 9 10.609v4.285c0 1.507 1.128 2.814 2.67 2.94 1.243.102 2.5.157 3.768.165l2.782 2.781a.75.75 0 001.28-.53v-2.39l.33-.026c1.542-.125 2.67-1.433 2.67-2.94v-4.286c0-1.505-1.125-2.811-2.664-2.94A49.392 49.392 0 0015.75 7.5z" />
+                              </svg>
+                              
+                              <h4 class="text-[rgb(43,65,110)] text-2xl py-2 font-semibold">Chat with team</h4>
+                        </div>
+                          <p class="text-xl text-center md:text-left text-primary">Have a question? Chat online with an expert. <a class="font-serif hover:underline" href="#">Start chatting</a> </p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 p-2">
+                    <div class="icon-head">
+                        <div class="flex items-center justify-center md:justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 pr-4">
+                                <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd" />
+                              </svg>
+                                                            
+                              <h4 class="text-[rgb(43,65,110)] text-2xl py-2 font-semibold">Call a specialist</h4>
+                        </div>
+                          <p class="text-xl text-center md:text-left text-primary">Our 24/7 support team is ready for you at 1-800-MY-Elixir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="why-choose-section pb-16">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-semibold text-[#2A3855] text-center py-2 relative">Why Choose Elixir</h2>
+            <div class="head-underline w-[125px] h-[5px] bg-black mx-auto mb-10"></div>
+            <div class="flex flex-col md:flex-row gap-6">
+                <div class="w-full md:w-1/2">
+                    <img src="images/why-choose-us.jpg" alt="why-choose-us">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <div class="flex flex-col gap-6">
+                        <div class="w-full p-2">
+                            <div class="icon-head">
+                                <div class="flex items-center justify-center md:justify-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 pr-4">
+                                        <path fill-rule="evenodd" d="M4.804 21.644A6.707 6.707 0 006 21.75a6.721 6.721 0 003.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 01-.814 1.686.75.75 0 00.44 1.223zM8.25 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM10.875 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zm4.875-1.125a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z" clip-rule="evenodd" />
+                                      </svg>
+                                      
+                                      <h4 class="text-[rgb(43,65,110)] text-2xl py-2 font-semibold">We Are Professional</h4>
+                                </div>
+                                  <p class="text-xl text-primary">We resource, train, speak, mentor and encourage; marketplace leaders, business owners and career professionals to be effective in the workplace.</p>
+                            </div>
+                        </div>
+                        <div class="w-full p-2">
+                            <div class="icon-head">
+                                <div class="flex items-center justify-center md:justify-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 pr-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                                      </svg>
+                                      
+                                      
+                                      </svg>
+                                      <h4 class="text-[rgb(43,65,110)] text-2xl py-2 font-semibold">We Are Creative</h4>
+                                </div>
+                                  <p class="text-xl text-center md:text-left text-primary">With so many factors to consider when deciding how to characterize your company , wouldn’t it be great to have a group of forward-thinking, well-informed individuals on board who know what they’re doing?</p>
+                            </div>
+                        </div>
+                        <div class="w-full p-2">
+                            <div class="icon-head">
+                                <div class="flex items-center justify-center md:justify-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 pr-4">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
+                                      </svg>
+                                      
+                                                                    
+                                      <h4 class="text-[rgb(43,65,110)] text-2xl py-2 font-semibold">24/7 Great Support</h4>
+                                </div>
+                                  <p class="text-xl text-center md:text-left text-primary">Design clever and compelling marketing strategies, improve product positioning, and drive conversion rates, Elixir is all time available to guide you.</p>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-team-section pb-16">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-semibold text-[#2A3855] text-center relative">OUR TEAM</h2>
+            <div class="head-underline w-[125px] h-[5px] bg-black mx-auto mb-10"></div>
+            <div class="flex flex-col md:flex-row gap-6">
+                <div class="w-full md:w-1/2 lg:w-1/4">
+                    <div class="imghover">
+                        <div class="hover-main">
+                          <img class="img-fluid" src="images/p-2.jpg" alt="meet">
+                          <div class="overlay">
+                            <div class="hover-content">
+                              <h5>Manager</h5>
+                            </div>
+                          </div>
+                        </div>
+                    </div>   
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4">
+                    <div class="imghover">
+                        <div class="hover-main">
+                          <img class="img-fluid" src="images/p-2.jpg" alt="meet">
+                          <div class="overlay">
+                            <div class="hover-content">
+                              <h5>Service Excutive</h5>
+                            </div>
+                          </div>
+                        </div>
+                    </div>   
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4">
+                    <div class="imghover">
+                        <div class="hover-main">
+                          <img class="img-fluid" src="images/p-2.jpg" alt="meet">
+                          <div class="overlay">
+                            <div class="hover-content">
+                              <h5>Sales Manager</h5>
+                            </div>
+                          </div>
+                        </div>
+                    </div>  
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4">
+                    <div class="imghover">
+                        <div class="hover-main">
+                          <img class="img-fluid" src="images/p-2.jpg" alt="meet">
+                          <div class="overlay">
+                            <div class="hover-content">
+                              <h5>Quality Manager</h5>
+                            </div>
+                          </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>            
+        </div>
+    </section>
+    <section class="pricing-section pt-10 pb-16">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-semibold text-[#2A3855] text-center py-4 relative">Designed for business teams like yours</h2>
+            <div class="grid  grid-col md:grid-cols-3 gap-4 mt-6">
+                <div class="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                    <h3 class="mb-4 text-2xl font-semibold">Starter</h3>
+                    <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Best option for personal use & for your next project.</p>
+                    <div class="flex items-baseline justify-center my-8">
+                        <span class="mr-2 text-5xl font-extrabold">$29</span>
+                        <span class="text-gray-500 dark:text-gray-400">/month</span>
+                    </div>
+                    <!-- List -->
+                    <ul role="list" class="mb-8 space-y-4 text-left">
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Individual configuration</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>No setup, or hidden fees</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Team size: <span class="font-semibold">1 developer</span></span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Premium support: <span class="font-semibold">6 months</span></span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Free updates: <span class="font-semibold">6 months</span></span>
+                        </li>
+                    </ul>
+                    <a href="#" class="text-white bg-gray-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-purple-900">Get started</a>
+                </div>
+
+                <div class="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                    <h3 class="mb-4 text-2xl font-semibold">Company</h3>
+                    <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Relevant for multiple users, extended & premium support.</p>
+                    <div class="flex items-baseline justify-center my-8">
+                        <span class="mr-2 text-5xl font-extrabold">$99</span>
+                        <span class="text-gray-500 dark:text-gray-400" dark:text-gray-400>/month</span>
+                    </div>
+                    <!-- List -->   
+                    <ul role="list" class="mb-8 space-y-4 text-left">
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Individual configuration</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>No setup, or hidden fees</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Team size: <span class="font-semibold">10 developers</span></span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Premium support: <span class="font-semibold">24 months</span></span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Free updates: <span class="font-semibold">24 months</span></span>
+                        </li>
+                    </ul>
+                    <a href="#" class="text-white bg-gray-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-purple-900">Get started</a>
+                </div>
+
+                <div class="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                    <h3 class="mb-4 text-2xl font-semibold">Enterprise</h3>
+                    <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Best for large scale uses and extended redistribution rights.</p>
+                    <div class="flex items-baseline justify-center my-8">
+                        <span class="mr-2 text-5xl font-extrabold">$499</span>
+                        <span class="text-gray-500 dark:text-gray-400">/month</span>
+                    </div>
+                    <!-- List -->
+                    <ul role="list" class="mb-8 space-y-4 text-left">
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Individual configuration</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>No setup, or hidden fees</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Team size: <span class="font-semibold">100+ developers</span></span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Premium support: <span class="font-semibold">36 months</span></span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>Free updates: <span class="font-semibold">36 months</span></span>
+                        </li>
+                    </ul>
+                    <a href="#" class="text-white bg-gray-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-purple-900">Get started</a>
+                </div>
+              </div>
+        </div>
+    </section>
+    <section class="sub-banner-section bg-[#2A3855] py-10">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-6">
+                <div class="w-9/12">
+                    <p class="text-3xl font-bold text-gray-200">If you have any query related investment... we are available 24/7</p>
+                </div>
+                <div class="w-3/12 flex items-center justify-center">
+                    <a class="text-black text-2xl text-bold py-1 px-6 bg-slate-200 rounded-2xl" href="#">contact</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="business-starergy pt-16 pb-6">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-semibold text-[#2A3855] text-center py-2 relative">Business Strategy</h2>
+            <div class="head-underline w-[125px] h-[5px] bg-black mx-auto"></div>
+            <div class="flex flex-col md:flex-row gap-6 py-10">
+                <div class="w-full md:w-1/2 lg:w-1/3 p-2">
+                    <div class="icon-head">
+                        <div class="text-center">
+                            <h3 class="counter text-[rgb(43,65,110)] text-3xl py-2 font-semibold" data-count="350">0</h3>
+                            <h4 class="text-[rgb(43,65,110)] text-2xl py-2 font-semibold">Profit</h4>
+                        </div>
+                          <p class="text-xl text-center text-primary">We transform brands, grow businesses, and tell brand and product stories in a most creative way.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 p-2">
+                    <div class="icon-head">
+                        <div class="text-center">
+                              <h3 class="counter text-[rgb(43,65,110)] text-3xl py-2 font-semibold" data-count="2000">0</h3>
+                              <h4 class="text-[rgb(43,65,110)] text-2xl py-2 font-semibold">Customers</h4>
+                        </div>
+                          <p class="text-xl text-center text-primary">We cover a large range of creative platforms and digital projects with one purpose: to create experiences.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 p-2">
+                    <div class="icon-head">
+                        <div class="text-center">
+                            <h3 class="counter text-[rgb(43,65,110)] text-3xl py-2 font-semibold" data-count="2300">0</h3>                        
+                              <h4 class="text-[rgb(43,65,110)] text-2xl py-2 font-semibold">Product Consulting</h4>
+                        </div>
+                          <p class="text-xl text-center text-primary">We guide you through the pipelines that generate new products with higher potential and lower risk.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="you-get-section py-10">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-semibold text-[#2A3855] text-center py-2 relative">Things You Get</h2>
+            <div class="head-underline w-[125px] h-[5px] bg-black mx-auto"></div>
+            <div class="flex flex-col md:flex-row gap-6 py-10">
+                <div class="w-full md:w-1/2 lg:w-1/3 p-2">
+                    <div class="icon-head">
+                        <div class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 pr-4 mx-auto">
+                                <path fill-rule="evenodd" d="M4.5 2.25a.75.75 0 000 1.5v16.5h-.75a.75.75 0 000 1.5h16.5a.75.75 0 000-1.5h-.75V3.75a.75.75 0 000-1.5h-15zM9 6a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H9zm-.75 3.75A.75.75 0 019 9h1.5a.75.75 0 010 1.5H9a.75.75 0 01-.75-.75zM9 12a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H9zm3.75-5.25A.75.75 0 0113.5 6H15a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zM13.5 9a.75.75 0 000 1.5H15A.75.75 0 0015 9h-1.5zm-.75 3.75a.75.75 0 01.75-.75H15a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zM9 19.5v-2.25a.75.75 0 01.75-.75h4.5a.75.75 0 01.75.75v2.25a.75.75 0 01-.75.75h-4.5A.75.75 0 019 19.5z" clip-rule="evenodd" />
+                              </svg>
+                              
+                              
+                              <h4 class="text-[rgb(43,65,110)] text-2xl py-2 font-semibold">Creative Support</h4>
+                        </div>
+                          <p class="text-xl text-center text-primary">We transform brands, grow businesses, and tell brand and product stories in a most creative way.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 p-2">
+                    <div class="icon-head">
+                        <div class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 pr-4 mx-auto">
+                                <path d="M4.913 2.658c2.075-.27 4.19-.408 6.337-.408 2.147 0 4.262.139 6.337.408 1.922.25 3.291 1.861 3.405 3.727a4.403 4.403 0 00-1.032-.211 50.89 50.89 0 00-8.42 0c-2.358.196-4.04 2.19-4.04 4.434v4.286a4.47 4.47 0 002.433 3.984L7.28 21.53A.75.75 0 016 21v-4.03a48.527 48.527 0 01-1.087-.128C2.905 16.58 1.5 14.833 1.5 12.862V6.638c0-1.97 1.405-3.718 3.413-3.979z" />
+                                <path d="M15.75 7.5c-1.376 0-2.739.057-4.086.169C10.124 7.797 9 9.103 9 10.609v4.285c0 1.507 1.128 2.814 2.67 2.94 1.243.102 2.5.157 3.768.165l2.782 2.781a.75.75 0 001.28-.53v-2.39l.33-.026c1.542-.125 2.67-1.433 2.67-2.94v-4.286c0-1.505-1.125-2.811-2.664-2.94A49.392 49.392 0 0015.75 7.5z" />
+                              </svg>
+                              
+                              </svg>
+                              <h4 class="text-[rgb(43,65,110)] text-2xl py-2 font-semibold">Creating Experiences</h4>
+                        </div>
+                          <p class="text-xl text-center text-primary">We cover a large range of creative platforms and digital projects with one purpose: to create experiences.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 p-2">
+                    <div class="icon-head">
+                        <div class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 pr-4 mx-auto">
+                                <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd" />
+                              </svg>
+                                                            
+                              <h4 class="text-[rgb(43,65,110)] text-2xl py-2 font-semibold">Product Consulting</h4>
+                        </div>
+                          <p class="text-xl text-center text-primary">We guide you through the pipelines that generate new products with higher potential and lower risk.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-6 py-10">
+                <div class="w-full md:w-1/2 lg:w-1/3 p-2">
+                    <div class="icon-head">
+                        <div class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 pr-4 mx-auto">
+                                <path fill-rule="evenodd" d="M4.5 2.25a.75.75 0 000 1.5v16.5h-.75a.75.75 0 000 1.5h16.5a.75.75 0 000-1.5h-.75V3.75a.75.75 0 000-1.5h-15zM9 6a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H9zm-.75 3.75A.75.75 0 019 9h1.5a.75.75 0 010 1.5H9a.75.75 0 01-.75-.75zM9 12a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H9zm3.75-5.25A.75.75 0 0113.5 6H15a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zM13.5 9a.75.75 0 000 1.5H15A.75.75 0 0015 9h-1.5zm-.75 3.75a.75.75 0 01.75-.75H15a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zM9 19.5v-2.25a.75.75 0 01.75-.75h4.5a.75.75 0 01.75.75v2.25a.75.75 0 01-.75.75h-4.5A.75.75 0 019 19.5z" clip-rule="evenodd" />
+                              </svg>
+                              
+                              
+                              <h4 class="text-[rgb(43,65,110)] text-2xl py-2 font-semibold">Business Boosting</h4>
+                        </div>
+                          <p class="text-xl text-center text-primary">We provide energy-efficient and environmentally conservative solutions to our clients to boost their business.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 p-2">
+                    <div class="icon-head">
+                        <div class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 pr-4 mx-auto">
+                                <path d="M4.913 2.658c2.075-.27 4.19-.408 6.337-.408 2.147 0 4.262.139 6.337.408 1.922.25 3.291 1.861 3.405 3.727a4.403 4.403 0 00-1.032-.211 50.89 50.89 0 00-8.42 0c-2.358.196-4.04 2.19-4.04 4.434v4.286a4.47 4.47 0 002.433 3.984L7.28 21.53A.75.75 0 016 21v-4.03a48.527 48.527 0 01-1.087-.128C2.905 16.58 1.5 14.833 1.5 12.862V6.638c0-1.97 1.405-3.718 3.413-3.979z" />
+                                <path d="M15.75 7.5c-1.376 0-2.739.057-4.086.169C10.124 7.797 9 9.103 9 10.609v4.285c0 1.507 1.128 2.814 2.67 2.94 1.243.102 2.5.157 3.768.165l2.782 2.781a.75.75 0 001.28-.53v-2.39l.33-.026c1.542-.125 2.67-1.433 2.67-2.94v-4.286c0-1.505-1.125-2.811-2.664-2.94A49.392 49.392 0 0015.75 7.5z" />
+                              </svg>
+                              
+                              </svg>
+                              <h4 class="text-[rgb(43,65,110)] text-2xl py-2 font-semibold">Strategic Approach</h4>
+                        </div>
+                          <p class="text-xl text-center text-primary">Based on solid strategic framework and real, relevant research, we create prototypes, not presentations.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 p-2">
+                    <div class="icon-head">
+                        <div class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 pr-4 mx-auto">
+                                <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd" />
+                              </svg>
+                                                            
+                              <h4 class="text-[rgb(43,65,110)] text-2xl py-2 font-semibold">Logistic Consulting</h4>
+                        </div>
+                          <p class="text-xl text-center text-primary">We work buy side and sell side to give our clienrts hard hitting answers and focus hard on best opportunities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-section bg-[#2A3855] py-16">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row gap-10">
+                <div class="w-full md:w-1/3">
+                    <div class="px-6 py-10 rounded-xl" style="border: 2px solid#FDD428;">
+                        <h3 class="text-3xl text-white text-bold pb-5">Request a call back</h3>
+                        <p class="text-xl text-white">Would you like to speak to one of our financial advisers over the phone? Just submit your details and we’ll be in touch shortly. You can also email us if you would prefer.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-3/4 p-5">
+                    <h4 class="text-white text-bold text-3xl mb-10">I would to discuss:</h4>
+                    <div class="flex flex-row gap-10">
+                        <div class="w-1/2">
+                           <input class="w-full p-4 rounded-xl" type="text" placeholder="Your Name">
+                        </div>
+                        <div class="w-1/2">
+                            <input class="w-full p-4 rounded-xl" type="number" placeholder="Number">
+                         </div>
+                    </div>
+                    <div class="flex flex-row mt-10 gap-10">
+                        <div class="w-1/2">
+                           <input class="w-full p-4 rounded-xl" type="text" placeholder="Subject">
+                        </div>
+                        <div class="w-1/2">
+                            <button class="w-full p-4 rounded-xl bg-[#FDD428] text-xl text-white">Submit</button>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- navbar-script -->
+   <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+
+<!-- navbar-color changes on scroll -->
+    <script>
+        const nav = document.querySelector('nav');
+
+        window.addEventListener('scroll',()=>{
+            if(window.scrollY >= 100){
+                nav.classList.add('active_nav');
+            }
+            else{
+                nav.classList.remove('active_nav');
+            }
+        })
+    </script>
+
+    <!-- auto text typing animations -->
+    
+    <script src="https://unpkg.com/ityped@0.0.10"></script>
+  <script>
+        window.ityped.init(document.querySelector('.ityped'),{
+            strings: ['Consultants'],
+            typeSpeed: 200,
+            backSpeed: 40,
+            loop: true
+        })
+    </script>
+    
+    <!-- animated counted  <h3 class="counter" data-count="625">0</h3>-->
+    <script>
+        // select the element
+        const counters = document.querySelectorAll('.counter');
+    
+        // iterate through all the counter elements
+        counters.forEach(counter => {
+          // function to increment the counter
+          function updateCount() {
+            const target = +counter.getAttribute('data-count');
+            const count = +counter.innerHTML;
+    
+            const inc = Math.floor((target - count) / 100);
+    
+            if (count < target && inc > 0) {
+              counter.innerHTML = (count + inc);
+              // repeat the function
+              setTimeout(updateCount, 1);
+            }
+            // if the count not equal to target, then add remaining count
+            else {
+              counter.innerHTML = target;
+            }
+          }
+          updateCount();
+        });
+      </script>
+
+      <!-- <script>
+        const body = document.querySelector("body")
+        const moon = document.querySelector("#moon")
+        moon.addEventListener("click", ()=>{
+            body.classList.toggle("dark")
+        })
+      </script> -->
+    <!-- dark-mode -->
+    <!-- <script>
+        const toggle = document.getElementById("toggle-theme");
+        toggle.addEventListener("change",() =>{
+          if(toggle.checked){
+            switchTheme(1);
+          }
+          else{
+            switchTheme(2);
+          }
+        });
+        function switchTheme(mode){
+          if(mode == 1){
+            document.documentElement.setAttribute('data-theme','dark');
+          }
+          else{
+            document.documentElement.setAttribute('data-theme','light');
+          }
+        }
+      </script> -->
+  </body>
+</html>

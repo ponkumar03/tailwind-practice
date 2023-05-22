@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics of Tailwindcss</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-slate-50">
+    <nav class="sticky top-0 z-30 w-full py-2 bg-gray-100 border-b-2 border-green-500">
+        <div class="container mx-auto">
+            <div class="flex justify-between">
+                <!-- Website Logo -->
+                <div>
+                    <a href="#" class="flex items-center py-4 px-2">
+                        <img src="images/Tailwind_CSS_Logo.svg.png" alt="Tailwind_CSS_Logo" class="h-8 w-8 mr-2">
+                        <span class="font-semibold text-gray-500 text-lg">Tailwind CSS</span>
+                    </a>
+                </div>
+                <!-- Primary Navbar items -->
+                <div class="hidden md:flex items-center">
+                    <a href="" class="py-1 mx-3 text-green-500 font-semibold hover:text-green-500 transition duration-300 ">Home</a>
+                    <a href="" class="py-1 mx-3 text-gray-500 font-semibold hover:text-green-500 transition duration-300">About</a>
+                    <a href="" class="py-1 mx-3 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Services</a>
+                    <a href="" class="py-1 mx-3 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Contact Us</a>
+                </div>
+                <!-- Secondary Navbar items -->
+                <div class="hidden md:flex items-center space-x-3 ">
+                    <a href="" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">Log In</a>
+                    <a href="" class="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300">Sign Up</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                    <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 "
+                        x-show="!showMenu"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="hidden mobile-menu">
+            <ul class="">
+                <li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</a></li>
+                <li><a href="#services" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Services</a></li>
+                <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">About</a></li>
+                <li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- component -->
+<!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
+  <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+    <div class="p-4 flex flex-row items-center justify-between">
+      <a href="#" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Flowtrail UI</a>
+      <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+          <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+      <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Blog</a>
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Portfolio</a>
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">About</a>
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Contact</a>
+      <div @click.away="open = false" class="relative" x-data="{ open: false }">
+        <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+          <span>Dropdown</span>
+          <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+        <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+          <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #1</a>
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #2</a>
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #3</a>
+          </div>
+        </div>
+      </div>    
+      <div @click.away="open = false" class="relative" x-data="{ open: false }">
+        <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+          <span>Dropdown</span>
+          <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+        <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+          <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #1</a>
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #2</a>
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #3</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div> -->
+
+    <!-- Banner-section -->
+     <section class="banner-section">
+         <div class="container mx-auto banner-content pt-10 pb-20">
+            <div class="flex flex-col md:flex-row">
+                <div class="w-full md:w-1/2">
+                    <h1 class="text-slate-900 font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight ">Rapidly build modern websites without ever leaving your HTML.</h1>
+                    <p class="mt-10 text-lg md:text-2xl text--600 max-w-3xl mx-auto">A utility-first CSS framework packed with classes like <code class="font-medium text-sky-500">flex</code>, <code class="font-mono font-medium text-sky-500 dark:text-sky-400">pt-4</code>,<code class="font-medium text-sky-500">text-center</code> that can be composed to build any design, directly in your markup.</p>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <img src="images/banner.jpg" class="w-full h-full" alt="tailwind css">
+                </div>
+            </div>
+         </div>
+     </section>
+     <!-- About Tailwind section -->
+     <section class="pb-5">
+        <div class="container mx-auto">
+            <h2 class="text-slate-900 font-extrabold text-3xl sm:text-5xl lg:text-4xl tracking-tight text-center py-5">About Tailwind CSS</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="bg-white p-8 rounded w-full md:w-1/2">
+                    <div id="accordion-collapse" data-accordion="collapse">
+                        <h2 id="accordion-collapse-heading-1">
+                            <button type="button" class="flex items-center focus:ring-4 focus:ring-green-200 dark:focus:ring-green-500 justify-between p-5 w-full font-medium text-left border border-green-200 dark:border-green-200 border-b-0 text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-t-xl" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+                      <span>What is Tailwind CSS?</span>
+                      <svg data-accordion-icon class="w-6 h-6 shrink-0 rotate-180" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                        </h2>
+                        <div id="accordion-collapse-body-1" aria-labelledby="accordion-collapse-heading-1">
+                            <div class="p-5 border border-green-200 dark:border-gray-700 dark:bg-gray-900 border-b-0">
+                                <p class="mb-2 text-gray-500 dark:text-gray-400">Tailwind CSS is basically a utility-first CSS framework for rapidly building custom user interfaces. It is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override..</p>
+                            </div>
+                        </div>
+                        <h2 id="accordion-collapse-heading-2">
+                            <button type="button" class="flex items-center focus:ring-4 focus:ring-green-200 dark:focus:ring-gray-800 justify-between p-5 w-full font-medium border border-green-200 dark:border-gray-700 border-b-0 text-left text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+                      <span>Advantages of Tailwind CSS</span>
+                      <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                        </h2>
+                        <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+                            <div class="p-5 border border-green-200 dark:border-green-200 border-b-0">
+                                <p class="mb-2 text-gray-500 dark:text-gray-400">Makes the changes in the desired manner. 
+                                    CSS is global in nature and if make changes in the file the property is changed in all the HTML files linked to it. But with the help of Tailwind CSS we can use utility classes and make local changes.</p>
+                            </div>
+                        </div>
+                        <h2 id="accordion-collapse-heading-3">
+                            <button type="button" class="flex items-center border focus:ring-green-200 focus:ring-green-200 dark:focus:ring-green-200 border-green-200 dark:border-green-200 justify-between p-5 w-full font-medium text-left text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+                      <span>Limitation of Tailwind CSS</span>
+                      <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                        </h2>
+                        <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+                            <div class="p-5 border border-green-200 dark:border-gray-700 border-t-0">
+                                <p class="mb-2 text-gray-500 dark:text-gray-400">Customize Tailwind's default theme can't be used
+                                    Directives like @apply, @variants, etc can't be used
+                                    Can't install third-party plugins</p>
+                                <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite,
+                                    Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best
+                                    of two worlds.</p>
+                                <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
+                                <ul class="list-disc pl-5 dark:text-gray-400 text-gray-500">
+                                    <li><a href="https://flowbite.com/pro/" target="_blank"
+                                            class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
+                                    <li><a href="https://tailwindui.com/" rel="nofollow" target="_blank"
+                                            class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8 rounded w-full md:w-1/2">
+                    <img src="images/Tailwind-CSS-min-scaled.jpg" class="w-full h-full" alt="content-images">
+                </div>
+            </div>
+        </div>
+     </section>
+     <!-- service-section -->
+     <h2 class="text-slate-900 font-extrabold text-3xl sm:text-5xl lg:text-4xl tracking-tight text-center py-5">Services of Tailwind CSS</h2>
+<!-- This is an example component -->
+<div class="container mx-auto"> 
+    <div class="bg-gray-50">
+        <ul class="flex flex-wrap justify-center pt-6" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+            <li role="presentation">
+                <button class="inline-block text-salte-300 hover:text-gray-600 border-gray-300 rounded-lg py-4 px-4 text-sm md:text-2xl font-medium text-center border-transparent border-2 dark:text-gray-400 dark:hover:text-gray-300 active" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="true">Modern Technologies</button>
+            </li>
+            <li role="presentation">
+                <button class="inline-block text-salte-300 hover:text-gray-600 border-gray-300 rounded-lg py-4 px-4 text-sm md:text-2xl font-medium text-center border-transparent border-2 dark:text-gray-400 dark:hover:text-gray-300" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Easy to customize</button>
+            </li>
+            <li role="presentation">
+                <button class="inline-block text-salte-300 hover:text-gray-600 border-gray-300 rounded-lg py-4 px-4 text-sm md:text-2xl font-medium text-center border-transparent border-2 dark:text-gray-400 dark:hover:text-gray-300" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">Built by experts</button>
+            </li>
+        </ul>
+    </div>
+    <div id="myTabContent">
+        <div class="flex flex-col md:flex-row bg-gray-50 p-4 rounded-lg dark:bg-gray-800" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+            <div class="w-full md:w-1/2 text-center p-6">
+                <img src="images/port.png" class="w-full h-full mx-auto round" alt="morden-technology">
+            </div>
+            <div class="w-full md:w-1/2 p-6">
+                <p class="text-gray-500 dark:text-gray-400 text-sm md:text-xl">Each template is a well-structured Next.js project, giving you a codebase that’s productive and enjoyable to work in. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam asperiores repellat eaque quas accusamus, iste commodi impedit temporibus tenetur! Error id velit facere quam quod! Aut earum quia reprehenderit nobis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo quia, quos cumque placeat mollitia saepe ullam impedit debitis facere! Repellendus soluta harum veniam aliquam illo laborum optio ipsa similique quam.</p>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+            <div class="w-full md:w-1/2 text-center p-6">
+                <img src="images/easy-to-cousta.jpg" class="w-full h-full mx-auto rounded" alt="morden-technology">
+            </div>
+            <div class="w-full md:w-1/2 p-6">
+                <p class="text-gray-500 dark:text-gray-400 text-sm md:text-xl">Each template is a well-structured Next.js project, giving you a codebase that’s productive and enjoyable to work in. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam asperiores repellat eaque quas accusamus, iste commodi impedit temporibus tenetur! Error id velit facere quam quod! Aut earum quia reprehenderit nobis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo quia, quos cumque placeat mollitia saepe ullam impedit debitis facere! Repellendus soluta harum veniam aliquam illo laborum optio ipsa similique quam.</p>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+            <div class="w-full md:w-1/2 text-center p-6">
+                <img src="images/build.png" class="w-full h-full mx-auto rounded" alt="morden-technology">
+            </div>
+            <div class="w-full md:w-1/2 p-6">
+                <p class="text-gray-500 dark:text-gray-400 text-sm md:text-xl">Each template is a well-structured Next.js project, giving you a codebase that’s productive and enjoyable to work in. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam asperiores repellat eaque quas accusamus, iste commodi impedit temporibus tenetur! Error id velit facere quam quod! Aut earum quia reprehenderit nobis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo quia, quos cumque placeat mollitia saepe ullam impedit debitis facere! Repellendus soluta harum veniam aliquam illo laborum optio ipsa similique quam.</p>
+            </div>
+        </div>
+</div>
+<section class="carousel-section py-20">
+    <div class="container mx-auto">
+        <div class="carousel-hedaing">
+          <h2 class="text-slate-900 font-extrabold text-3xl sm:text-5xl lg:text-4xl tracking-tight text-center pt-5 pb-10">Our Tailwind CSS</h2>
+          </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div id="customers-testimonials" class="owl-carousel">
+      
+                  <!--TESTIMONIAL 1 -->
+                  <div class="item">
+                    <div class="shadow-effect">
+                      <img class="w-72 h-42 rounded" src="images/tailwindcss3.png">
+                      <div class="item-details">
+                        <p class="text-gray-500 dark:text-gray-400 text-sm md:text-lg py-3">“Tailwind CSS is the only framework that I've seen scale on large teams. It’s easy to customize, adapts to any design, and the build size is tiny.”</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!--END OF TESTIMONIAL 1 -->
+                  <!--TESTIMONIAL 2 -->
+                  <div class="item">
+                    <div class="shadow-effect">
+                      <img class="w-72 h-42 rounded" src="images/tailwindcss2.jpg">
+                      <div class="item-details">
+                        <p class="text-gray-500 dark:text-gray-400 text-sm md:text-lg py-3">“Tailwind CSS is the only framework that I've seen scale on large teams. It’s easy to customize, adapts to any design, and the build size is tiny.”</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!--END OF TESTIMONIAL 2 -->
+                  <!--TESTIMONIAL 3 -->
+                  <div class="item">
+                    <div class="shadow-effect">
+                      <img class="w-72 h-42 rounded" src="images/tailwindcss3.png">
+                      <div class="item-details">
+                        <p class="text-gray-500 dark:text-gray-400 text-sm md:text-lg py-3">“Tailwind CSS is the only framework that I've seen scale on large teams. It’s easy to customize, adapts to any design, and the build size is tiny.”</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!--END OF TESTIMONIAL 3 -->
+                  <!--TESTIMONIAL 4 -->
+                  <div class="item">
+                    <div class="shadow-effect">
+                      <img class="w-72 h-42 rounded" src="images/tailwindcss2.jpg">
+                      <div class="item-details">
+                        <p class="text-gray-500 dark:text-gray-400 text-sm md:text-lg py-3">“Tailwind CSS is the only framework that I've seen scale on large teams. It’s easy to customize, adapts to any design, and the build size is tiny.”</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!--END OF TESTIMONIAL 4 -->
+                </div>
+              </div>
+            </div>
+        </div>
+</section>
+        
+<!-- tabs.js -->
+<link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
+<!-- <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script> -->
+
+    <!-- jquery.min.css -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- owl-carousal-min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- navbar.js -->
+    <script>
+        const btn = document.querySelector("button.mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+
+    <!-- accordion and tabs-collapse.js -->
+    <script src="https://unpkg.com/flowbite@1.3.3/dist/flowbite.js"></script>
+    
+    <!-- owl-carousal.js -->
+    <script>
+        jQuery(document).ready(function($) {
+      "use strict";
+      $('#customers-testimonials').owlCarousel( {
+          loop: true,
+          items: 4,
+          margin: 30,
+          autoplay: true,
+          dots:true,
+          nav:true,
+          autoplayTimeout: 8500,
+          smartSpeed: 450,
+          navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
+          responsive: {
+            0: {
+              items: 1
+            },
+            640:{
+              items:2
+            },
+            768: {
+              items: 3
+            },
+            1024: {
+              items: 4
+            },
+            1440: {
+              items: 4
+            }
+          }
+        });
+      });
+      </script>
+</body>
+</html>
