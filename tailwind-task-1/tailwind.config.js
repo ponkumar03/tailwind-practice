@@ -4,10 +4,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'pop': ['Poppins', 'sans-serif']
+        'pop': ['Poppins']
       },
       backgroundImage: {
-        'hero-pattern': "url('/tailwind-task-1/dist/images/baneer.webp')"
+        'hero-pattern': "url('/tailwind-task-1/dist/images/baneer.webp')",
+        'choose-image': "url('/tailwind-task-1/dist/images/holiday.png')"
       }
     },
   },
