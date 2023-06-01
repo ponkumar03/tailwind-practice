@@ -38,9 +38,9 @@
                   </li>
                 </ul>
                 <div class="nav-icons">
-                    <a href="#"><img src="/codespot-user/images/quesion-mark.png" alt="quesion-mark" class="img-fluid"></a>
-                    <a href="#"><img src="/codespot-user/images/bell.png" alt="bell-icon" class="img-fluid"></a>
-                    <a href="#"><img src="/codespot-user/images/lm-icon.png" alt="user-icon" class="user-icon img-fluid"></a>
+                    <a href="#"><i class="bi bi-question-octagon"></i></a>
+                    <a href="#"><i class="bi bi-bell"></i></a>
+                    <a href="#"><span class="nav-logo">LM</span></a>
                 </div>
               </div>
             </div>
@@ -51,27 +51,27 @@
               <div class="mail-content">
                 <img class="orange-banner img-fluid" src="images/orange-banner.png" alt="orange-banner">
                 <div class="row main-row">
-                  <div class="col-md-3">
+                  <div class="col-sm-2">
                     <div class="user-image">
-                      <img src="/codespot-user/images/lm-icon.png" alt="user-icon">
+                      <img src="/codespot-user/images/lm-icon.png" alt="user-icon" class="img-fluid">
                     </div>
                   </div>
-                  <div class="col-md-9">
+                  <div class="col-sm-10">
                      <div class="mail-edit d-flex align-items-center justify-content-between">
                       <p>Lokesh Murali</p>
-                      <a href="#"><img class="img-fluid" src="/codespot-user/images/edit-icon.svg" alt="edit"></a>
+                      <a href="#"><img class="edit-image img-fluid" src="/codespot-user/images/edit-icon.svg" alt="edit"></a>
                      </div>
                      <div class="row form-group">
-                      <div class="col-md-6">
+                      <div class="col-6">
                         <div class="forminput">
-                          <label for="exampleFormControlInput1" class="form-label">Email ID <img src="/codespot-user/images/check-icon.png" alt=""> Verified </label>
-                          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="lokeshmurali420@gmail.com">
+                          <label for="exampleFormControlInput1" class="form-label">Email ID <img class="img-fluid check-icon" src="/codespot-user/images/check-icon.png" alt=""> Verified </label>
+                          <input type="email" class="form-control form-borders " id="exampleFormControlInput1" placeholder="lokeshmurali420@gmail.com">
                         </div>
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-6">
                         <div class="forminput">
                           <label for="exampleFormControlInput2" class="form-label">Mobile Number</label>
-                          <input type="number" class="form-control" id="exampleFormControlInput2" placeholder="+91 99875 06520">
+                          <input type="number" class="form-control form-borders" id="exampleFormControlInput2" placeholder="+91 99875 06520">
                         </div>
                       </div>
                      </div>
@@ -84,18 +84,44 @@
             <div class="container">
               <div class="summary-main">
                 <div class="summary-edit d-flex align-items-center justify-content-between">
-                  <p>Summary</p>
-                  <a href="#"><img class="img-fluid" src="/codespot-user/images/edit-icon.svg" alt="edit"></a>
+                  <h1 class="summary-heading">Summary</h1>
+                  <a href="#"><img class="edit-image img-fluid" src="/codespot-user/images/edit-icon.svg" alt="edit"></a>
                  </div>
                  <div class="summary-content">
                   <div class="row">
                     <div class="col-md-6 mx-auto text-center">
-                      <img src="/codespot-user/images/note.png" alt="notepad">
+                      <img class="img-fluid" src="/codespot-user/images/note.png" alt="notepad">
                         <p>Give us a short idea about who you are, what you like and what you are made of.</p>
-                        <button type="submit">Add Summary</button>
+                         <!-- Button trigger modal -->
+                        <button type="button" class="oranges-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Summary</button>
                     </div>
                   </div>
-                 </div> 
+                 </div>
+                
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="summary-heading" id="exampleModalLabel">Summary</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <p>
+                            Tell us about your years of experience, industry, or skills. People also talk about their achievements or previous job experiences.
+                          </p>
+                          <div class="model-content">
+                              <textarea class="form-control text-content" rows="4">I’m a UI Designer, I specialize in designing user interfaces and digital products. I don’t restrict myself to design. The blend of design, user experience, marketing, generative artist.
+                              </textarea>
+                              <p class="count-num text-end">210/2000</p>
+                          </div>
+                        </div>
+                        <div class="modal-footer mx-auto">
+                          <button type="button" class="oranges-btn">Update</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
               </div>
             </div>
           </section>
@@ -103,15 +129,15 @@
             <div class="container">
               <div class="summary-main">
                 <div class="summary-edit d-flex align-items-center justify-content-between">
-                  <p>Educational Qualifications</p>
-                  <a href="#"><img class="img-fluid" src="/codespot-user/images/edit-icon.svg" alt="edit"></a>
+                  <h1 class="summary-heading">Educational Qualifications</h1>
+                  <a href="#"><img class="edit-image img-fluid" src="/codespot-user/images/edit-icon.svg" alt="edit"></a>
                  </div>
                  <div class="summary-content">
                   <div class="row">
                     <div class="col-md-6 mx-auto text-center">
-                      <img src="/codespot-user/images/note.png" alt="notepad">
+                      <img class="img-fluid" src="/codespot-user/images/note.png" alt="notepad">
                         <p>Share your Educational Qualifications like your University and about your schooling.</p>
-                        <button type="submit">Add Qualifications</button>
+                        <button type="submit" class="oranges-btn">Add Qualifications</button>
                     </div>
                   </div>
                  </div> 
@@ -122,15 +148,15 @@
             <div class="container">
               <div class="summary-main">
                 <div class="summary-edit d-flex align-items-center justify-content-between">
-                  <p>Certifications</p>
-                  <a href="#"><img class="img-fluid" src="/codespot-user/images/edit-icon.svg" alt="edit"></a>
+                  <h1 class="summary-heading">Certifications</h1>
+                  <a href="#"><img class="edit-image img-fluid" src="/codespot-user/images/edit-icon.svg" alt="edit"></a>
                  </div>
                  <div class="summary-content">
                   <div class="row">
                     <div class="col-md-6 mx-auto text-center">
-                      <img src="/codespot-user/images/note.png" alt="notepad">
+                      <img class="img-fluid" src="/codespot-user/images/note.png" alt="notepad">
                         <p>Share your achievements and certifications that decorate your hall of fame wall.</p>
-                        <button type="submit">Add Qualifications</button>
+                        <button type="submit" class="oranges-btn">Add Qualifications</button>
                     </div>
                   </div>
                  </div> 
