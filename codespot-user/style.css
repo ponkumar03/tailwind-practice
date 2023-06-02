@@ -256,7 +256,65 @@
 .modal-footer {
    border-top: 0px; 
 }
+.reset-btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 154%;
+    color: #BFBFBF;
+    padding: 10px 24px;
+    background:#FFFFFF;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    box-shadow: 0 0 7px #d1d1d1;
+}
+.reset-btn:hover{
+    background:  #FF6C1A;
+    color:antiquewhite;
+    box-shadow: 0px 24px 32px rgba(255, 108, 26, 0.25), 0px 16px 24px rgba(255, 108, 26, 0.15), 0px 4px 8px rgba(255, 108, 26, 0.15), 0px 0px 1px rgba(255, 108, 26, 0.15);
+}
 
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: inherit;
+    font-family: bootstrap-icons !important;
+    content: "\F282";
+    border: none;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    color: #000 !important;
+    line-height: 1;
+}
+.form-main {
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+.input-group .btn {
+    border: 1px solid#dee2e6;
+}
+.form-control:focus {
+    box-shadow: none;
+}
+.form-select:focus {
+    box-shadow: none;
+}
+.row-main {
+    padding-top: 25px;
+}
+.form-label {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #7C7C7C;
+}
+.form-check {
+    padding-top: 20px;
+}
 
 
 
@@ -268,6 +326,9 @@
     } 
     .nav-icons a {
         margin-left: 25px;
+    }
+    .summary-edit {
+        padding-bottom: 30px;
     }
 }
 @media screen and (max-width:1199px) {
@@ -319,6 +380,9 @@
     .oranges-btn {
         padding: 8px 20px;
     }
+    .reset-btn {
+        padding: 8px 20px;
+    }
     .pink-vector {
         width: 260px;
         height: 150px;
@@ -347,6 +411,21 @@
     }
 }
 @media screen and (max-width:991px) {
+.navbar-collapse {
+    background: #fff;
+    border-radius: 15px;
+    margin-top: 5px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+.navbar-toggler:focus {
+    background: #FF6C1A;
+    box-shadow: none;
+}
+/* .navbar-toggler:hover .navbar-toggler-icon,
+ .navbar-toggler:focus .navbar-toggler-icon {
+    filter: invert(1);
+ } */
     .navbar-expand-lg .navbar-nav .nav-link.active::before{
         display: none;
     }
@@ -415,6 +494,10 @@
         font-size: 14px;
         padding: 8px 18px;
     }
+    .reset-btn {
+        font-size: 14px;
+        padding: 8px 18px;
+    }
     .modal-content {
         padding: 12px 35px 35px 35px;
     }
@@ -428,6 +511,21 @@
     }
     .modal-footer {
         padding: 0px;
+    }
+    .row-main {
+        padding-top: 20px;
+    }
+    .form-main {
+        padding-top: 0px;
+    }
+    .form-check {
+        padding-top: 15px;
+    }
+    .form-control {
+        font-size: 14px;
+    }
+    .form-select {
+        font-size: 14px;
     }
 }    
 @media screen and (max-width:767px) {
@@ -506,6 +604,15 @@
         font-size: 14px;
         padding: 10px;
     }
+    .row-main {
+        padding-top: 15px;
+    }
+    .sub-row1 {
+        padding-top: 15px;
+    }
+    .form-main {
+        padding-bottom: 20px;
+    }
 }
 @media screen and (max-width:575px) {
     .navbar-toggler {
@@ -524,7 +631,7 @@
         font-size: 20px;
     }
     .form-label {
-        margin-bottom: 0px;
+        margin-bottom: 5px;
     }
     .form-group {
         padding-top: 10px;
@@ -544,9 +651,19 @@
         font-size: 13px;
         padding: 6px 14px;
     }
+    .reset-btn {
+        font-size: 13px;
+        padding: 6px 14px;
+    }
     .check-icon {
         width: 16px;
         height: auto;
+    }
+    .form-control {
+        font-size: 13px;
+    }
+    .form-select {
+        font-size: 13px;
     }
     .forminput input::placeholder {
         font-size: 13px;
@@ -565,7 +682,9 @@
     .modal-header {
         padding-bottom: 10px;
     }
-
+    .form-label {
+        font-size: 14px;
+    }
 }
 @media screen and (max-width:425px) {
     .user-section::before {

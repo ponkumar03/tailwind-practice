@@ -20,7 +20,7 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarScroll">
-                <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <ul class="navbar-nav mx-auto my-2 my-lg-0">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
@@ -28,13 +28,13 @@
                     <a class="nav-link" href="#">Programs</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link">How we train</a>
+                    <a class="nav-link" href="#">How we train</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link">Road map</a>
+                    <a class="nav-link" href="#">Road map</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link">Contact us</a>
+                    <a class="nav-link" href="#">Contact us</a>
                   </li>
                 </ul>
                 <div class="nav-icons">
@@ -121,7 +121,9 @@
                         </div>
                       </div>
                     </div>
-                  </div> 
+                  </div>
+                  <!-- Modal --> 
+
               </div>
             </div>
           </section>
@@ -137,10 +139,100 @@
                     <div class="col-md-6 mx-auto text-center">
                       <img class="img-fluid" src="/codespot-user/images/note.png" alt="notepad">
                         <p>Share your Educational Qualifications like your University and about your schooling.</p>
-                        <button type="submit" class="oranges-btn">Add Qualifications</button>
+                        <button type="button" class="oranges-btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">Add Qualifications</button>
                     </div>
                   </div>
                  </div> 
+
+                 <!-- Modal -->
+                 <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="summary-heading" id="exampleModalLabel">Educational Qualifications</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="form-main">
+                          <form>
+                            <div class="row row-main">
+                              <div class="col-md-12">
+                                <label for="inputytext" class="form-label">College Name</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Enter your College Name">
+                              </div>
+                            </div>
+                            <div class="row row-main">
+                              <div class="col-md-12">
+                                <label for="inputytext" class="form-label">Department</label>
+                                  <div class="input-group">
+                                    <button class="btn btn-outline dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">B.E.</button>
+                                      <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">MECH</a></li>
+                                        <li><a class="dropdown-item" href="#">CSE</a></li>
+                                        <li><a class="dropdown-item" href="#">ECE</a></li>
+                                        <li><a class="dropdown-item" href="#">EEE</a></li>
+                                        <li><a class="dropdown-item" href="#">CVIEL</a></li>
+                                      </ul>
+                                    <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Enter your study">
+                                  </div>
+                            </div>
+                            </div>
+                            <div class="row row-main gx-3">
+                              <div class="col-md-6">
+                                <div class="row sub-row gx-3">
+                                  <label for="inputytext" class="form-label">Start Year</label>
+                                  <div class="col-6">
+                                    <select class="form-select" aria-label="Default select example">
+                                      <option selected>Month</option>
+                                      <option value="1">One</option>
+                                      <option value="2">Two</option>
+                                      <option value="3">Three</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-6">
+                                    <select class="form-select" aria-label="Default select example">
+                                      <option selected>Year</option>
+                                      <option value="1">One</option>
+                                      <option value="2">Two</option>
+                                      <option value="3">Three</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="row sub-row1 gx-3">
+                                  <label for="inputytext" class="form-label">Graduation year</label>
+                                  <div class="col-6">
+                                    <select class="form-select" aria-label="Default select example">
+                                      <option selected>Month</option>
+                                      <option value="1">One</option>
+                                      <option value="2">Two</option>
+                                      <option value="3">Three</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-6">
+                                    <select class="form-select" aria-label="Default select example">
+                                      <option selected>Year</option>
+                                      <option value="1">One</option>
+                                      <option value="2">Two</option>
+                                      <option value="3">Three</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="modal-footer d-flex align-items-center justify-content-between px-0">
+                        <button type="button" class="reset-btn  m-0">Reset</button>
+                        <button type="button" class="oranges-btn  m-0">Update</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal --> 
+
               </div>
             </div>
           </section>
@@ -156,10 +248,103 @@
                     <div class="col-md-6 mx-auto text-center">
                       <img class="img-fluid" src="/codespot-user/images/note.png" alt="notepad">
                         <p>Share your achievements and certifications that decorate your hall of fame wall.</p>
-                        <button type="submit" class="oranges-btn">Add Qualifications</button>
+                        <button type="button" class="oranges-btn" data-bs-toggle="modal" data-bs-target="#exampleModal2">Add Qualifications</button>
                     </div>
                   </div>
-                 </div> 
+                 </div>
+                 
+                 <!-- Modal -->
+                 <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="summary-heading" id="exampleModalLabel">Certifications</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="form-main">
+                          <form>
+                            <div class="row row-main">
+                              <div class="col-md-6">
+                                <label for="inputytext" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Enter your College Name">
+                              </div>
+                              <div class="col-md-6 pt-md-0 pt-sm-3 pt-2">
+                                <label for="inputytext" class="form-label">Issuing Organisation</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Enter your College Name">
+                              </div>
+                            </div>
+                            <div class="row row-main">
+                              <div class="col-md-6">
+                                <label for="inputytext" class="form-label">Credential ID</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Enter your College Name">
+                              </div>
+                              <div class="col-md-6 pt-md-0 pt-sm-3 pt-2">
+                                <label for="inputytext" class="form-label">Credential Link</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Enter your College Name">
+                              </div>
+                            </div>
+                            <div class="row row-main gx-3">
+                              <div class="col-md-6">
+                                <div class="row sub-row gx-3">
+                                  <label for="inputytext" class="form-label">Issue Year</label>
+                                  <div class="col-6">
+                                    <select class="form-select" aria-label="Default select example">
+                                      <option selected>Month</option>
+                                      <option value="1">One</option>
+                                      <option value="2">Two</option>
+                                      <option value="3">Three</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-6">
+                                    <select class="form-select" aria-label="Default select example">
+                                      <option selected>Year</option>
+                                      <option value="1">One</option>
+                                      <option value="2">Two</option>
+                                      <option value="3">Three</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="row sub-row1 gx-3">
+                                  <label for="inputytext" class="form-label">Expiry Year</label>
+                                  <div class="col-6">
+                                    <select class="form-select" aria-label="Default select example">
+                                      <option selected>Month</option>
+                                      <option value="1">One</option>
+                                      <option value="2">Two</option>
+                                      <option value="3">Three</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-6">
+                                    <select class="form-select" aria-label="Default select example">
+                                      <option selected>Year</option>
+                                      <option value="1">One</option>
+                                      <option value="2">Two</option>
+                                      <option value="3">Three</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                              <label class="form-check-label" for="flexCheckDefault">
+                                This Certificate will not expire.
+                              </label>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="modal-footer d-flex align-items-center justify-content-between p-0">
+                        <button type="button" class="reset-btn  m-0">Reset</button>
+                        <button type="button" class="oranges-btn  m-0">Update</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal --> 
               </div>
             </div>
           </section>
