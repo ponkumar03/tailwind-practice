@@ -1,0 +1,132 @@
+.search-bar {
+    width: 358px;
+    padding: 12px 17px 12px 20px;
+    background: #FFFFFF;
+    border: 1px solid #D9D9DE;
+    border-radius: 8px;
+}
+.search-bar input {
+    border: none;
+    width: 100%;
+}
+.form-search {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #5B5B80;
+}
+.search-bar i {
+    font-size: 20px;
+    padding-left: 14px;
+}
+select:focus-visible,
+input:focus-visible {
+    border: none;
+    outline: none;
+}
+.select-wrap 
+{
+  margin-left: 40px;
+  border-radius: 4px;
+  padding: 0px;
+  width:262px;
+}
+.select-wrap label
+{
+    font-family: 'Manrope';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #9CA3AF;
+}
+select
+{
+    font-family: 'Styrene A LC';
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 34px;
+    color: #111827;
+    border: none;
+}
+.select-location img  {
+    margin-right: 10px;
+    width: 15px;
+    height: 20px;
+}
+.nav-icons {
+    display: flex;
+    align-items: center;
+}
+.nav-icons a{
+    padding-right: 60px;
+}
+.nav-icons .btn {
+    padding: 0px;
+}
+.btn.show {
+    border: none;
+}
+.dropdown-menu[data-bs-popper] {
+    top: 100%;
+    left: auto;
+    right: 0;
+}
+.navbar {
+    padding-top: 31px;
+    padding-bottom: 19px;
+    background: #fff;
+}
+.banner-section {
+    position: relative;
+    padding-top: 114px;
+    background: #F5F5F6;
+}
+.events-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 0px;
+    border-top: 1px solid #D9D9DE;
+    /* border-bottom: 1px solid #D9D9DE; */
+}
+.events-main a img {
+    padding-right: 12px;
+}
+.events-main a{
+    font-family: 'Styrene A LC';
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 34px;
+    color: #0E0E2C;
+    text-decoration: none;
+}
+.view-btn {
+    font-family: 'Styrene A LC';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #4E1FA3;
+    padding: 12px 18px;
+    background: rgba(78, 31, 163, 0.05);
+    border-radius: 8px;
+}
+.event-page {
+    position: relative;
+    font-family: 'Manrope';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #808095;
+}
+.event-page::before {
+    content: " ";
+    position: absolute;
+    width: 76%;
+    height: 1px;
+    top: 50%;
+    right: 0;
+    background-color:#D9D9DE;
+}

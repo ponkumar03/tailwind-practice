@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Styrene A LC';
+    src: url('fonts/StyreneALCRegular.eot');
+    src: url('fonts/StyreneALCRegular.eot') format('embedded-opentype'),
+         url('fonts/StyreneALCRegular.woff2') format('woff2'),
+         url('fonts/StyreneALCRegular.woff') format('woff'),
+         url('fonts/StyreneALCRegular.ttf') format('truetype'),
+         url('fonts/StyreneALCRegular.svg#StyreneALCRegular') format('svg');
+}

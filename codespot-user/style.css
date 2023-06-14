@@ -8,7 +8,7 @@
 .user-section::before {
     content: "";
     position: absolute;
-    background: url(/codespot-user/images/pink-image.png) no-repeat right top;
+    background: url(/codespot-user/assets/images/pink-image.png) no-repeat right top;
     background-size: cover;
     width: 640px;
     height: 740px;
@@ -152,7 +152,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 154%;
-    color: #192A44;
+    color: #BFBFBF;
 }
 .form-borders:focus {
     border: none;
@@ -302,6 +302,10 @@
 }
 .input-group .btn {
     border: 1px solid#dee2e6;
+}
+.form-select,
+.form-control {
+    padding: 12px 19px;
 }
 .form-control:focus {
     box-shadow: none;
