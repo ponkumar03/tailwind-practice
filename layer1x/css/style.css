@@ -60,7 +60,7 @@ select
     align-items: center;
 }
 .nav-icons a{
-    padding-right: 60px;
+    margin-right: 60px;
 }
 .nav-icons .btn {
     padding: 0px;
@@ -75,13 +75,14 @@ select
     right: 0;
 }
 .navbar {
-    padding-top: 19px;
-    padding-bottom: 19px;
+    padding: 19px 40px;
     background: #fff;
+    align-items: center;
+    justify-content: space-between;
 }
 .banner-section {
+    padding: 0px 40px;
     position: relative;
-    padding-top: 103px;
     background: #F5F5F6;
 }
 .events-main {
@@ -89,15 +90,16 @@ select
     align-items: center;
     justify-content: space-between;
     padding-top: 22px;
-    padding-bottom: 9px;
+    padding-bottom: 22px;
     border-top: 1px solid #D9D9DE;
+    border-bottom: 1px solid #D9D9DE;
 }
 .events-main a img {
-    padding-right: 12px;
+    margin-right: 12px;
 }
 .events-main a{
     font-family: 'Styrene A LC';
-    font-weight: 500;
+    font-weight: 600;
     font-size: 26px;
     line-height: 34px;
     color: #0E0E2C;
@@ -114,23 +116,21 @@ select
     background: rgba(78, 31, 163, 0.05);
     border-radius: 8px;
 }
+.events-main a.view-btn:hover {
+    background-color: #4E1FA3;
+    color: #FFFFFF;
+}
 .event-page {
+    display: inline-block;
     position: relative;
     font-family: 'Manrope';
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
     color: #808095;
-    margin-bottom: 50px;
-}
-.event-page::before {
-    content: " ";
-    position: absolute;
-    width: 78%;
-    height: 1px;
-    top: 50%;
-    right: 0;
-    background-color:#D9D9DE;
+    top: -12px;
+    background: #F5F5F6;
+    padding-right: 20px;
 }
 .event-main-detail {
     display: flex;
@@ -150,7 +150,7 @@ select
 }
 .event-heading {
     font-family: 'Styrene A LC';
-    font-weight: 500;
+    font-weight: 600;
     font-size: 26px;
     line-height: 34px;
     color: #111827;
@@ -210,6 +210,10 @@ select
     width: 100%;
     border-radius: 8px;
 }
+.event-saidbar-details .register-btn:hover {
+    background-color: #FFFFFF;
+    color: #4E1FA3;
+}
 .event-discription {
     padding-bottom: 26px;
     border-bottom: 1px solid #D9D9DE;
@@ -217,7 +221,7 @@ select
 h4 {
     font-family: 'Styrene A LC';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 20px;
     line-height: 26px;
     color: #111827;   
@@ -264,7 +268,10 @@ h4 {
     background: rgba(78, 31, 163, 0.05);
     border-radius: 8px;
     padding: 8px 10px; 
-    margin-right: 26px;
+}
+.speaker-section .tag-btns:hover {
+    background-color: #4E1FA3;
+    color: #FFFFFF;
 }
 .event-card {
     position: relative;
@@ -278,9 +285,7 @@ h4 {
     position: absolute;
     top: 10px;
     right: 10px;
-    width: 50px;
-    height: 50px;
-    padding: 5px;
+    padding: 5px 14px;
     background: #FFFFFF;
     border-radius: 8.45498px;
 }
@@ -396,12 +401,12 @@ h4 {
 }
 .nav-tabs {
     border-bottom: none;
-    margin-bottom: 26px;
+    gap: 26px;
+    padding-bottom: 20px;
 }
 .nav-tabs .nav-link {
     border: none;
     padding: 0px;
-    margin-right: 24px;
 }
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     background-color: transparent;
@@ -413,21 +418,118 @@ h4 {
     border: 3px solid #4E1FA3;
     border-radius: 16px;
 }
+.event-card-row {
+    row-gap: 25px;
+}
+.events-section-row {
+    row-gap: 30px;
+}
+.common-tags {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+
+
+
+
+/* saidbar.css */
+.event-main-section {
+    position: relative;
+    display: flex;
+    height: 100%;
+}
+.event-main-saidbar {
+    width: 245px;
+    background-image: url(/layer1x/assets/images/background-image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.event-main-right-section {
+    position: relative;
+    width: calc(100% - 245px);
+    background: #F5F5F6;
+}
+.logo {
+    padding: 22px 0px;
+}
+hr {
+    opacity: 0.08;
+    border: 1px solid #FFFFFF;
+    margin: 0px 14px;
+}
+.app-section a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    padding: 17px 0px;
+}
+.app-section a:hover {
+    background: #232369;
+}
+.app-section {
+    padding: 12px 0px;
+}
+.app-section a span {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+.app-section a img {
+    margin-right: 18px;
+    margin-left: 46px;
+}
+.screen-shot-image {
+    padding-top: 102px;
+}
+
+
 
 
 /* responsive sections */
+@media (max-width:1256px) {
+    .navbar {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .event-right-bar {
+        padding-left: 25px;
+    }
+    .banner-section {
+        padding: 0px 30px;
+    }
+}
+
 @media (max-width:1199px) {
+    .event-main-saidbar {
+        width: 200px;
+    }
+    .event-main-right-section {
+        width: calc(100% - 200px);
+    }
+    .app-section a img {
+        margin-right: 10px;
+        margin-left: 35px;
+    }
+    .app-section a span {
+        font: 13px;
+    }
     .search-bar {
-        width: 300px;
+        width: 250px;
     }
     select {
         font-size: 20px;
     }
     .nav-icons a {
-        padding-right: 50px;
+        margin-right: 40px;
     }
     .select-wrap {
-        width: 240px;
+        width: 230px;
     }
     .event-heading,
     .events-main a {
@@ -438,17 +540,14 @@ h4 {
         padding: 10px 13px;
     }
     .event-page {
-        margin-bottom: 40px;
-    }
-    .event-page::before {
-        width: 73%;
+        margin-bottom: 30px;
     }
     .event-content h5 {
         font-size: 14px;
     }
     .event-discription p,
     .event-details h5 {
-        font-size: 16px;
+        font-size: 15px;
     }
     .event-details img.events-hero {
         width: 42px;
@@ -457,5 +556,297 @@ h4 {
     .event-discription h4,
     .event-main-detail {
         padding: 22px 0px;
+    }
+    .view-box a {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    .view-box p {
+        font-size: 10px;
+    }
+    .date-box h5 {
+        font-size: 14px;
+    }
+    .date-box p {
+        font-size: 12px;
+    }
+   .register-btn {
+    font-size: 18px;
+   }
+}
+
+@media (max-width:1024px) {
+    .logo {
+        padding: 18px 0px;
+    }
+}
+
+@media (max-width:991px) {
+    .banner-section {
+        padding: 0px 20px;
+    }
+    .navbar {
+        display: block;
+        padding: 20px 20px;
+    }
+    .logo img {
+        width: 70px;
+        height: auto;
+    }
+    .nav-icons {
+        margin-top: 25px;
+    }
+    .nav-icons a {
+        margin-right: 80px;
+    }
+    .event-page {
+        font-size: 12px;
+    }
+    .event-right-bar {
+        padding-left: 10px;
+    }
+    .select-wrap {
+        margin-left: 80px;
+        margin-top: 0px;
+    }
+    .events-main a.view-btn {
+    font-size: 12px;
+    padding: 8px 13px;
+    }
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+}
+@media (max-width:767px) {
+    .select-wrap {
+        margin-left: 40px;
+    }
+    .logo img {
+        width: 50px;
+        height: auto;
+    }
+    .upcoming-event-heading {
+        padding-top: 30px;
+    }
+    .event-page {
+        margin-bottom: 30px;
+    }
+    .events-main a img {
+        width: 40px;
+        height: auto;
+    }
+    .event-page {
+        font-size: 14px;
+    }
+    .btn img {
+        width: 50px;
+        height: auto;
+    }
+    .event-main-saidbar {
+        width: 100px;
+    }
+    .event-main-right-section {
+        width: calc(100% - 100px);
+    }
+    .app-section a span {
+        display: none;
+    }
+    .app-section {
+        padding: 5px 0px;
+    }
+    .search-bar {
+        padding: 8px 17px 8px 15px;
+    }
+    select {
+        font-size: 18px;
+    }
+    .app-section a:hover span {
+        position: absolute;
+        content: " ";
+        display: block;
+        top: 0px;
+        right: -100px;
+        width: 120px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background: #232369;
+        border-radius: 8px;
+        z-index: 1;
+    }
+}
+@media (max-width:640px) {
+    select {
+        font-size: 16px;
+    }
+    .events-main a img {
+        width: 35px;
+        height: auto;
+    }
+    .event-heading, .events-main a {
+        font-size: 20px;
+    }
+    .event-page {
+        margin-bottom: 20px;
+    }
+    .speaker-section h4,
+    .event-discription h4, 
+    .event-main-detail,
+    .event-heading {
+        padding: 20px 0px;
+    }
+    .event-discription p, .event-details h5 {
+        font-size: 15px;
+    }
+    .event-discription {
+        padding-bottom: 20px;
+    }
+    .event-saidbar-details .register-btn {
+        font-size: 18px;
+        padding: 10px 18px;
+    }
+    .upcoming-event-heading {
+        padding-top: 20px;
+    }
+    .nav-tabs, .event-main-detail, .common-tags {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+}
+@media (max-width:575px) {
+    .event-main-saidbar {
+        width: 80px;
+    }
+    .event-main-right-section {
+        width: calc(100% - 80px);
+    }
+    .app-section a img {
+        margin-right: 10px;
+        margin-left: 25px;
+    }
+    .form-search {
+        font-size: 12px;
+    }
+    .search-section {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .select-wrap {
+        margin-left: 0;
+    }
+    .search-bar {
+        width: 250px;
+        padding: 5px 10px 5px 10px;
+    }
+    select {
+        font-size: 14px;
+    }
+    .select-location img {
+        margin-right: 5px;
+    }
+    .dropdown-item {
+        font-size: 14px;
+    }
+    .nav-icons a {
+        width: 25px;
+        height: auto;
+    }
+    .event-heading {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .speaker-section h4, .event-discription h4, .event-main-detail, .event-heading {
+        padding: 16px 0px;
+    }
+    h4 {
+        font-size: 18px;
+    }
+    .event-discription p, .event-details h5 {
+        font-size: 14px;
+        margin-bottom: 5px;
+        line-height: 22px;
+    }
+    .event-page {
+        font-size: 13px;
+    }
+    .border-div {
+        display: none;
+    }
+    .event-agenda img {
+        padding: 8px 10px;
+    }
+    .events-main a.view-btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    .nav-tabs,
+    .event-main-detail,
+    .common-tags {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .speaker-section .tag-btns {
+        font-size: 12px;
+    }
+    .event-right-bar {
+        padding-left: 20px;
+    }
+    .nav-icons a {
+        margin-right: 30px;
+    }
+    .upcoming-event-section {
+        padding-bottom: 30px;
+    }
+    .event-agenda {
+        display: block;
+    }
+    .events-main {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+@media (max-width:425px) {
+    .navbar-toggler {
+        padding: 4px;
+    }
+    .event-heading, .events-main a {
+        font-size: 18px;
+    }
+    .event-agenda {
+        display: block;
+    }
+    .nav-tabs {
+        gap: 9px;
+    }
+    .events-section-row {
+        row-gap: 20px;
+    }
+    .event-details-heading {
+        font-size: 12px !important;
+    }
+    .upcoming-event-heading {
+        flex-wrap: wrap !important;
+        gap: 15px;
+    }
+    .event-page {
+        margin-bottom: 5px;
+    }
+    .upcoming-event-section {
+        padding-bottom: 20px;
+    }
+    .nav-tabs, .event-main-detail, .common-tags {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .event-saidbar-details .register-btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    .view-box a {
+        font-size: 10px;
+        padding: 3px 12px;
     }
 }
