@@ -120,17 +120,25 @@ select
     background-color: #4E1FA3;
     color: #FFFFFF;
 }
-.event-page {
-    display: inline-block;
+.breadcrumb-main {
+    display: flex;
+}
+.breadcrumb {
+    margin-top: -12px;
+    padding-right: 20px;
+    background: #F5F5F6;
+    margin-bottom: 40px;
+}
+
+.breadcrumb-item a {
     position: relative;
     font-family: 'Manrope';
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
     color: #808095;
-    top: -12px;
     background: #F5F5F6;
-    padding-right: 20px;
+    text-decoration: none;
 }
 .event-main-detail {
     display: flex;
@@ -336,6 +344,10 @@ h4 {
     border-radius: 8px;
     padding: 8px 18px; 
 }
+.view-box a:hover {
+    background-color: #4E1FA3;
+    color: #fff;
+}
 .view-box {
     display: flex;
     align-items: center;
@@ -517,7 +529,7 @@ hr {
         margin-left: 35px;
     }
     .app-section a span {
-        font: 13px;
+        font-size: 13px;
     }
     .search-bar {
         width: 250px;
@@ -616,6 +628,16 @@ hr {
     .navbar-toggler:focus {
         box-shadow: none;
     }
+    .btn img {
+        width: 50px;
+        height: auto;
+    }
+    .search-bar {
+        padding: 8px 17px 8px 17px;
+    }
+    .breadcrumb {
+        margin-bottom: 30px;
+    }
 }
 @media (max-width:767px) {
     .select-wrap {
@@ -637,10 +659,6 @@ hr {
     }
     .event-page {
         font-size: 14px;
-    }
-    .btn img {
-        width: 50px;
-        height: auto;
     }
     .event-main-saidbar {
         width: 100px;
@@ -678,6 +696,9 @@ hr {
     }
 }
 @media (max-width:640px) {
+    .breadcrumb {
+        margin-bottom: 20px;
+    }
     select {
         font-size: 16px;
     }
@@ -732,7 +753,7 @@ hr {
     }
     .search-section {
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 15px;
     }
     .select-wrap {
         margin-left: 0;
@@ -807,10 +828,71 @@ hr {
         flex-wrap: wrap;
         gap: 20px;
     }
+    .search-bar i {
+        font-size: 15px;
+    }
+    .btn img {
+        width: 40px;
+        height: auto;
+    }
+    .events-main {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .events-main {
+        padding-top: 15px;
+    }
 }
 @media (max-width:425px) {
+    .events-main a img {
+        width: 30px;
+        height: auto;
+    }
+    .event-content h5, .date-box h5 {
+        line-height: 18px;
+    }
+    .events-main a.view-btn {
+        font-size: 10px;
+        padding: 4px 10px;
+    }
+    .search-section {
+        gap: 5px;
+    }
+    .select-wrap label,
+    select {
+        font-size: 10px;
+    }
+    .select-location img {
+        width: 10px;
+        height: 15px;
+    }
+    .nav-icons {
+        margin-top: 20px;
+    }
+    .btn img {
+        width: 40px;
+        height: auto;
+    }
     .navbar-toggler {
         padding: 4px;
+    }
+    .btn img {
+        width: 35px;
+        height: auto;
+    }
+    .event-saidbar-details {
+        padding: 14px 0px;
+        border-top: 1px solid #D9D9DE;
+    }
+    .event-saidbar-details .register-btn {
+        font-size: 12px;
+        padding: 6px 15px;
+    }
+    .date-box {
+        padding: 5px 10px;
+    }
+    .date-box h5 {
+        font-size: 12px;
     }
     .event-heading, .events-main a {
         font-size: 18px;
@@ -848,5 +930,18 @@ hr {
     .view-box a {
         font-size: 10px;
         padding: 3px 12px;
+    }
+    .app-section a:hover span  {
+        top: 10px;
+        right: -95px;
+        width: 100px;
+        height: 40px;
+    }
+    .nav-icons a img {
+        width: 20px;
+        height: auto;
+    }
+    .breadcrumb-item a {
+        font-size: 10px;
     }
 }
