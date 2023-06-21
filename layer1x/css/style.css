@@ -500,7 +500,17 @@ hr {
     padding-top: 102px;
 }
 
-
+/* user-profile screen start*/
+.progress-level {
+    width: 100%;
+}
+.progress-level p{
+    margin-bottom: 0px;
+}
+.progress {
+    width: -webkit-fill-available;
+}
+/* user-profile screen end */
 
 
 /* responsive sections */
