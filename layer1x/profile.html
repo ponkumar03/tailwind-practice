@@ -77,7 +77,7 @@
          <!-- Resume-section    -->
          <div class="resume-section">
             <div class="performens row">
-                <div class="col-lg-7">
+                <div class="col-lg-6">
                     <div class="progress-main d-flex align-items-center">
                         <img src="assets/images/hero-icon.png" alt="hero-icon" class="img-fluid">
                     <div class="progress-level">
@@ -86,18 +86,93 @@
                             <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                                 <div class="progress-bar" style="width: 75%"></div>
                             </div>
-                            <p>75%</p>
+                            <span>75%</span>
                         </div>
                     </div>
                     </div>
                 </div>
-                <div class="download-resume col-lg-5">
-                    <div class="event-saidbar-details d-flex align-items-center">
-                        <a href="#" class="share-btn"><img src="assets/images/share-icon.png" alt="share-icon"> Share Resume</a>
-                    </div>
+                <div class="download-resume col-lg-6 d-flex align-items-center justify-content-end">
+                  <div class="dropdown">
+                    <a class="share-btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-share"></i> Share Resume
+                    </a>
+                  
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#"><i class="bi bi-twitter"></i> Twitter</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="bi bi-facebook"></i> Facebook</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="bi bi-whatsapp"></i> Whatsapp</a></li>
+                    </ul>
+                  </div>
+                  <!-- <a href="#" class="share-btn"><img src="assets/images/share-icon.png" alt="share-icon"> Share Resume</a> -->
                     <a href="#" class="resume-btn">Download Resume</a>
                 </div>
             </div>
+            <div class="details-section">
+              <div class="detail-content">
+                <p>Email Address</p>
+                <h6>jessica.hanson@blockchain.com</h6>
+              </div>
+              <div class="border-div"></div>
+              <div class="detail-content">
+                <p>Phone Number</p>
+                <h6>(307) 555-0133</h6>
+              </div>
+              <div class="border-div"></div>
+              <div class="detail-content">
+                <p>Location</p>
+                <h6>California, USA</h6>
+              </div>
+              <div class="border-div"></div>
+              <div class="detail-content">
+                <p>Job title</p>
+                <h6>User Interface Designer</h6>
+              </div>
+            </div>
+         </div>
+
+         <!-- Information section -->
+         <div class="information-section">
+           <div class="row">
+            <div class="col-lg-3">
+              <nav>
+                <div class="nav nav-tabs profile-tabs mb-3" id="nav-tab" role="tablist">
+                  <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Basic Information</button>
+                  <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Contact Information</button>
+                  <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Skills</button>
+                </div>
+              </nav>
+            </div>
+            <div class="col-lg-9">
+              <div class="tab-content profile-tabs-content" id="nav-tabContent">
+                <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                  <h6>Basic Information</h6>
+                  <div class="information-field">
+                    <div class="row">
+                        <div class="col-12">
+                          <form class="form-floating">
+                            <input type="email" class="form-control" placeholder="Enter Developer’s Name " value="Enter Developer’s Name">
+                            <label class="profile-label" for="floatingInputInvalid">Developer's Full Name</label>
+                          </form>
+                        </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                  <p><strong>This is some placeholder content the Profile tab's associated content.</strong>
+                    Clicking another tab will toggle the visibility of this one for the next.
+                    The tab JavaScript swaps classes to control the content visibility and styling. You can use it with
+                    tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+                </div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                  <p><strong>This is some placeholder content the Contact tab's associated content.</strong>
+                    Clicking another tab will toggle the visibility of this one for the next.
+                    The tab JavaScript swaps classes to control the content visibility and styling. You can use it with
+                    tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+                </div>
+              </div>
+            </div>
+           </div>
          </div>
       </section>
       </div>

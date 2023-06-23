@@ -127,7 +127,7 @@ select
     margin-top: -12px;
     padding-right: 20px;
     background: #F5F5F6;
-    margin-bottom: 40px;
+    margin-bottom: 49px;
 }
 
 .breadcrumb-item a {
@@ -509,6 +509,163 @@ hr {
 }
 .progress {
     width: -webkit-fill-available;
+}
+.progress-level p {
+    font-family: Styrene A LC;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31px;
+    color: #0F172A;
+}
+.progress-level p span {
+    font-family: Manrope;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #4E1FA3;
+}
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+.bar span {
+    font-family: Manrope;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #4E1FA3;
+    margin-left: 15px;
+}
+.progress-bar {
+    background: #4E1FA3;
+}
+.progress-main img {
+    margin-right: 20px;
+}
+.download-resume .share-btn {
+font-family: Manrope;
+font-size: 14px;
+font-weight: 400;
+line-height: 19px;
+color: #192A44;
+text-decoration: none;
+padding: 10px 14px;
+border-radius: 8px;
+}
+.download-resume .share-btn:hover {
+    background: rgba(78, 31, 163, 0.05);
+    
+}
+.download-resume .share-btn img {
+    margin-right: 15px;
+}
+.download-resume .resume-btn {
+    font-family: Styrene A LC;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 8px 24px;
+    background: #4E1FA3;
+    border-radius: 8px;
+    margin-left: 24px;
+}
+.download-resume .resume-btn:hover {
+    background: rgba(78, 31, 163, 0.05); 
+    color: #4E1FA3;
+}
+.share-btn::after {
+    display: none;
+} 
+.share-btn i {
+    font-size: 18px;
+    color: #4E1FA3;
+    margin-right: 15px;
+}
+.details-section {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 16px 0px;
+    border-radius: 8px;
+    background: #FAFBFC;
+    margin-top: 33px;
+}
+.detail-content p{
+    font-family: Manrope;
+    color: #94A3B8;
+    font-size: 14px;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+}
+.detail-content h6 {
+    font-size: 16px;
+    font-family: Styrene A LC;
+    font-weight: 600;
+    color: #0F172A;margin-bottom: 0px;
+}
+.resume-section {
+    padding: 31PX 24PX;
+    border-radius: 8PX;
+    background: #FFFFFF;
+}
+/* information-section */
+
+.information-section {
+   margin-top: 30px;
+   
+}
+.profile-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 12px;
+}
+.profile-tabs-content {
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 20px;
+}
+.nav-tabs .nav-link {
+    text-align: left;
+    font-size: 14px;
+    font-family: Manrope;
+    color: #808095;
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+.nav-tabs .nav-link:hover {
+    background: #FAFBFC;
+    color: #4E1FA3;
+}
+.nav-tabs .nav-link.active {
+    background: #FAFBFC;
+    color: #4E1FA3;
+    font-weight: 600;
+}
+.tab-pane h6 {
+    font-size: 16px;
+    font-family: Styrene A LC;
+    font-weight: 600;
+    color: #0E0E2C;
+}
+.profile-label {
+    font-size: 12px;
+    font-family: Manrope;
+    color: #808095;
+}
+.form-floating>label {
+    padding-left: 0;
+}
+.form-floating>.form-control {
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #D9D9DE;
+    padding-left: 0px;
 }
 /* user-profile screen end */
 
