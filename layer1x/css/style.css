@@ -647,11 +647,12 @@ border-radius: 8px;
     color: #4E1FA3;
     font-weight: 600;
 }
-.tab-pane h6 {
+.tab-content h6 {
     font-size: 16px;
     font-family: Styrene A LC;
     font-weight: 600;
     color: #0E0E2C;
+    padding-bottom: 12px;
 }
 .profile-label {
     font-size: 12px;
@@ -667,6 +668,93 @@ border-radius: 8px;
     border-bottom: 1px solid #D9D9DE;
     padding-left: 0px;
 }
+input::placeholder {
+    color: #0E0E2C;
+    font-size: 14px;
+    font-family: Manrope;
+    font-weight: 600;
+}
+.custom-file-button input:focus {
+    border-bottom: 1px solid #D9D9DE;
+    box-shadow: none;
+}
+.custom-file-button input {
+    border: none;
+    border-bottom: 1px solid #D9D9DE;
+    border-radius: 0;
+    box-shadow: none;
+    padding-left: 0px;
+}
+#preview {
+    position: relative;
+    overflow: hidden;
+    height: 60px;
+    width: 60px;
+    background-color: #ddd;
+    border: 1px solid #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    &:after {
+      content: 'Preview';
+      display: inline-block;
+      font-size: 1rem;
+      color: #fff;
+    }
+    
+    img {
+        width: 60px;
+        height: 60px;
+      display: block;
+    }
+  }
+  .information-field {
+    padding: 16px 27px;
+    border-radius: 16px;
+    background: #FAFBFC;  }
+  
+  .custom-file-button input[type=file]::-webkit-file-upload-button {
+    display: none;
+  }
+  
+  .custom-file-button input[type=file]::file-selector-button {
+    display: none;
+  }
+  .custom-file-button {
+    position: relative;
+    border: none;
+  }
+  .file-icon {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    transform: rotate(45deg);
+    cursor: pointer;
+  }
+  .main-information {
+    row-gap: 16px;
+  }
+  .form-floating>.form-control {
+    background: none;
+  }
+  .form-floating>.form-control:not(:placeholder-shown)~label::after, .form-floating>.form-select~label::after {
+    background: none;
+  }
+  .clear-btn,
+  .update-btn {
+    color: #FFF;
+    font-size: 14px;
+    font-family: Styrene A LC;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 24px;
+    border-radius: 8px;
+    background: rgba(78, 31, 163);
+    margin-top: 14px;
+  }
+  .clear-btn {
+    background: rgba(78, 31, 163, 0.10);
+    color: #4E1FA3;
+  }
+
 /* user-profile screen end */
 
 
