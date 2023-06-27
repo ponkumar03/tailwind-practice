@@ -660,13 +660,18 @@ border-radius: 8px;
     color: #808095;
 }
 .form-floating>label {
+    top: -5px;
     padding-left: 0;
 }
 .form-floating>.form-control {
     border: none;
     border-radius: 0px;
     border-bottom: 1px solid #D9D9DE;
+    background: #FAFBFC;
     padding-left: 0px;
+}
+.form-floating>.form-control:not(:placeholder-shown)~label::after {
+    background: #FAFBFC;
 }
 input::placeholder {
     color: #0E0E2C;
@@ -674,73 +679,105 @@ input::placeholder {
     font-family: Manrope;
     font-weight: 600;
 }
-.custom-file-button input:focus {
-    border-bottom: 1px solid #D9D9DE;
-    box-shadow: none;
-}
-.custom-file-button input {
-    border: none;
-    border-bottom: 1px solid #D9D9DE;
-    border-radius: 0;
-    box-shadow: none;
-    padding-left: 0px;
-}
-#preview {
-    position: relative;
-    overflow: hidden;
-    height: 60px;
-    width: 60px;
-    background-color: #ddd;
-    border: 1px solid #fff;
-    box-shadow: 0 0 3px rgba(0,0,0,0.3);
-    &:after {
-      content: 'Preview';
-      display: inline-block;
-      font-size: 1rem;
-      color: #fff;
-    }
-    
-    img {
-        width: 60px;
-        height: 60px;
-      display: block;
-    }
-  }
   .information-field {
     padding: 16px 27px;
     border-radius: 16px;
     background: #FAFBFC;  }
   
-  .custom-file-button input[type=file]::-webkit-file-upload-button {
-    display: none;
-  }
-  
-  .custom-file-button input[type=file]::file-selector-button {
-    display: none;
-  }
-  .custom-file-button {
-    position: relative;
-    border: none;
-  }
-  .file-icon {
-    position: absolute;
-    top: 30px;
-    right: 10px;
-    transform: rotate(45deg);
-    cursor: pointer;
-  }
   .main-information {
     row-gap: 16px;
   }
-  .form-floating>.form-control {
-    background: none;
+/* choose-file css */
+input {
+    width: 100%;
+   }
+  #preview {
+    position: relative;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    background-color: #ddd;
+    &:after {
+      content: '';
+      display: inline-block;
+    }
+    
+    img {
+      display: block;
+    }
   }
-  .form-floating>.form-control:not(:placeholder-shown)~label::after, .form-floating>.form-select~label::after {
-    background: none;
+  .file {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    height: 58px;
+  }
+  .file-custom {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    height: 58px;
+    padding: 24px 0 0;
+    line-height: 1.5;
+    color: #555;
+    background: #FAFBFC;
+    border-bottom: 1px solid #D9D9DE;
+    border-radius: none;
+    user-select: none;
+    &:after {
+     content: 'photo.jpg';
+     color: #0E0E2C;
+     font-size: 14px;
+     font-family: Manrope;
+     font-weight: 500;
+    }
+    &.active:after {
+      content: attr(data-label);
+    }
+    &:before {
+      position: absolute;
+      top: 10px;
+      right: -.075rem;
+      bottom: -.075rem;
+      z-index: 6;
+      display: block;
+      content: "\F4B3";
+      font-family: bootstrap-icons !important;
+      transform: rotate(45deg);
+      height: 60px;
+      padding: 1rem 1rem 0;
+      line-height: 1.5;
+      color: #555;
+    }
+  }
+  .choose-label {
+    position: absolute;
+    z-index: 10;
+    color: #808095;
+    font-size: 12px;
+    font-family: Manrope;
+    left: 0;
+    top: 0;
+  }
+  .form-floating>.form-control:not(:placeholder-shown) {
+    color: #0E0E2C;
+    font-size: 14px;
+    font-family: Manrope;
+    font-weight: 500;
+  }
+/* choose-file css end*/
+
+  .btns {
+    display: flex;
   }
   .clear-btn,
   .update-btn {
     color: #FFF;
+    display: block;
+    width: 100px;
+    height: 34px;
     font-size: 14px;
     font-family: Styrene A LC;
     text-decoration: none;
@@ -753,8 +790,44 @@ input::placeholder {
   .clear-btn {
     background: rgba(78, 31, 163, 0.10);
     color: #4E1FA3;
+    margin-left: 24px;
   }
-
+ 
+  /* contact information css */
+  .instagram-main h6,
+  .facebook-main h6,
+  .linked-main h6,
+  .stack-main h6,
+  .git-main h6 {
+    color: #171515;
+    font-size: 14px;
+    font-family: Styrene A LC;
+    font-weight: 500;
+    margin-bottom: 0px;
+    padding-top: 10px;
+  }
+  .instagram-main h6 i,
+  .facebook-main h6 i,
+  .linked-main h6 i,
+  .stack-main h6 i,
+  .git-main h6 i {
+    font-size: 16px;
+    margin-right: 8px;
+  }
+  .stack-main h6 {
+    color: #F48024;
+  }
+  .linked-main h6 {
+    color: #069;
+  }
+  .facebook-main h6 {
+    color: #3B5998;
+  }
+  .instagram-main h6 {
+    background: linear-gradient(#4E5ECA, #AF39A6, #EE4B60, #FA5248);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
 /* user-profile screen end */
 
 
