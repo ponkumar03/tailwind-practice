@@ -614,8 +614,7 @@ border-radius: 8px;
 /* information-section */
 
 .information-section {
-   margin-top: 30px;
-   
+   margin-top: 30px;  
 }
 .profile-tabs {
     display: flex;
@@ -629,6 +628,7 @@ border-radius: 8px;
     background: #FFFFFF;
     border-radius: 8px;
     padding: 20px;
+    margin-bottom: 50px;
 }
 .nav-tabs .nav-link {
     text-align: left;
@@ -767,6 +767,15 @@ input {
     font-family: Manrope;
     font-weight: 500;
   }
+  .form-floating>.form-light:not(:placeholder-shown) {
+    color: #D9D9DE;
+  }
+  .chips-input::placeholder {
+    font-size: 14px;
+    font-family: Manrope;
+    font-weight: 500;
+     color: #D9D9DE;
+  }
 /* choose-file css end*/
 
   .btns {
@@ -829,7 +838,62 @@ input {
     -webkit-background-clip: text;
   }
 /* user-profile screen end */
+ /* skills-section */
+ .chips-main {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D9D9DE;
+ }
+ .chips-lable {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #808095;
+    font-size: 12px;
+    font-family: Manrope;
+ }
+ .chips-list {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: contents;
+  }
 
+  .chips-list li{
+      font-size: 12px;
+      font-family: Manrope;
+      color: #4E1FA3;
+      display: flex;
+      align-items: center;
+      background: rgba(78, 31, 163, 0.10);
+      padding: 3px 7px 3px 15px;
+      border-radius: 4px;
+      margin-right: 5px;
+    }
+
+    .chips-list a{
+        color: #D9D9DE;
+        text-decoration: none;
+        margin-left: 10px;
+        font-size: 10px;
+        background: rgba(78, 31, 163, 0.20);
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        display: inline-flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .chips-input {
+    border: 0px;
+    background: none;
+    margin-bottom: 5px;
+    display: inline-block;
+    margin-bottom: 0px;
+  }
 
 /* responsive sections */
 @media (max-width:1256px) {

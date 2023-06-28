@@ -139,20 +139,21 @@
                   <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Basic Information</button>
                   <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Contact Information</button>
                   <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Skills</button>
+                  <button class="nav-link" id="nav-work-tab" data-bs-toggle="tab" data-bs-target="#nav-work" type="button" role="tab" aria-controls="nav-work" aria-selected="false">Work Experience</button>
                 </div>
               </nav>
             </div>
             <div class="col-lg-9">
               <div class="tab-content profile-tabs-content" id="nav-tabContent">
 
-                <div class="tab-pane fade active show" id="nav-home" role="tabpanel"             aria-labelledby="nav-home-tab">
+                <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                   <h6>Basic Information</h6>
                   <div class="information-field">
                     <div class="row main-information">
                       <!-- user-name -->
                         <div class="col-lg-12">
                           <form class="form-floating">
-                            <input type="email" class="form-control" placeholder="Enter Developer’s Name " value="Enter Developer’s Name">
+                            <input type="email" class="form-control form-light" placeholder="Enter Developer’s Name " value="Enter Developer’s Name">
                             <label class="profile-label" for="floatingInputInvalid">Developer's Full Name</label>
                           </form>
                         </div>
@@ -294,11 +295,120 @@
                   <a href="#" class="clear-btn">Clear</a>
                   </div>
                 </div>
+
                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                  <p><strong>This is some placeholder content the Contact tab's associated content.</strong>
-                    Clicking another tab will toggle the visibility of this one for the next.
-                    The tab JavaScript swaps classes to control the content visibility and styling. You can use it with
-                    tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+                  <h6>Skills</h6>
+                  <div class="information-field">
+                    <div class="row main-information">
+                      <!-- Email-address -->
+                        <div class="col-lg-12">
+                            <div class="d-flex align-items-center chips-main">
+                              <label class="chips-lable" for="txt">Programming languages</label>
+                              <ul id="list" class="chips-list list"></ul>                           
+                              <input class="chips-input txt" type="text" id="txt" placeholder="">
+                            </div>
+                          </div>
+
+                          <div class="col-lg-12">
+                            <div class="d-flex align-items-center chips-main">
+                              <label class="chips-lable" for="txt">Frameworks and libraries</label>
+                              <ul id="list" class="chips-list"></ul>                           
+                              <input class="chips-input" type="text" id="txt" placeholder="">
+                            </div>
+                          </div>
+                          <div class="col-lg-12">
+                            <div class="d-flex align-items-center chips-main">
+                              <label class="chips-lable" for="txt">Tools and platforms</label>
+                              <ul id="list" class="chips-list"></ul>                           
+                              <input class="chips-input" type="text" id="txt" placeholder="">
+                            </div>
+                          </div>
+                          <div class="col-lg-12">
+                            <div class="d-flex align-items-center chips-main">
+                              <label class="chips-lable" for="txt">Soft skills</label>                          
+                              <input class="chips-input" type="text" id="txt" placeholder="Communication, teamwork, problem-solving, etc.">
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="btns">
+                      <a href="#" class="update-btn">Update</a>
+                      <a href="#" class="clear-btn">Clear</a>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane fade" id="nav-work" role="tabpanel" aria-labelledby="nav-work-tab">
+                    <h6>Work Experience</h6>
+                    <div class="information-field">
+                      <div class="row main-information">
+                        <!-- job -->
+                          <div class="col-lg-12">
+                            <form class="form-floating">
+                              <input type="email" class="form-control form-light" placeholder="Enter Your Job Title" value="Enter Your Job Title">
+                              <label class="profile-label" for="floatingInputInvalid">Job title</label>
+                            </form>
+                          </div>
+                          <!-- choose-file -->
+                          <div class="col-lg-6 d-flex">
+                            <div class="row choose-file-main">
+                              <div class="col-lg-3">
+                                <div id="preview">
+                                  <img src="/layer1x/assets/images/picture.png" alt="avather">
+                                </div>
+                              </div>
+                              <div class="col-lg-9 ps-1">
+                                <label class="file">
+                                  <span class="choose-label">Company Logo</span>
+                                <input type="file" id="file" accept="image/*" aria-label="File browser">
+                                <span class="file-custom"></span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Company name -->
+                          <div class="col-lg-6">
+                            <form class="form-floating">
+                              <input type="email" class="form-control" placeholder="Enter your company name" value="Enter your company name">
+                              <label class="profile-label" for="floatingInputInvalid">Company name</label>
+                            </form>
+                          </div>
+                          <!-- Company name -->
+                          <div class="col-lg-12">
+                            <form class="form-floating">
+                              <input type="email" class="form-control" placeholder="Enter your company name" value="Enter your company name">
+                              <label class="profile-label" for="floatingInputInvalid">Company name</label>
+                            </form>
+                          </div>
+                          <!-- Employment start date -->
+                          <div class="col-lg-6">
+                            <form class="form-floating">
+                              <input type="date" class="form-control">
+                              <label class="profile-label" for="floatingInputInvalid">Employment start date</label>
+                            </form>
+                          </div>
+                          <!-- Employment End date -->
+                          <div class="col-lg-6">
+                            <form class="form-floating">
+                              <input type="date" class="form-control">
+                              <label class="profile-label" for="floatingInputInvalid">Employment end date</label>
+                            </form>
+                          </div>
+                          <!-- commends -->
+                          <div class="col-lg-12">
+                            <div class="form-floating">
+                              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 80px">The California Art Festival is a showcase of the best and brightest artists from across the state. From painters to sculptors, photographers to performance artists, this festival has it all.</textarea>
+                              <label for="floatingTextarea2">Key responsibilities and achievements</label>
+                            </div>
+                          </div>
+                      </div>
+                      
+                    </div>
+                    <div class="btns">
+                      <a href="#" class="update-btn">Update</a>
+                    <a href="#" class="clear-btn">Clear</a>
+                    </div>
+                  </div>
+                  
                 </div>
               </div>
             </div>
