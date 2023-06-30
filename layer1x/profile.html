@@ -7,6 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">		
     <link rel="stylesheet" href="css/font-style.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -295,7 +299,7 @@
                   <a href="#" class="clear-btn">Clear</a>
                   </div>
                 </div>
-
+           <!-- skills-section -->
                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                   <h6>Skills</h6>
                   <div class="information-field">
@@ -336,77 +340,88 @@
                       <a href="#" class="clear-btn">Clear</a>
                     </div>
                   </div>
-
+                  <!-- Work Experience-section -->
                   <div class="tab-pane fade" id="nav-work" role="tabpanel" aria-labelledby="nav-work-tab">
-                    <h6>Work Experience</h6>
-                    <div class="information-field">
-                      <div class="row main-information">
-                        <!-- job -->
-                          <div class="col-lg-12">
+                    <div class="row">
+                      <div class="customer_records">
+                        <h6>Work Experience</h6>
+                        <div class="information-field">
+                          <div class="row main-information">
+                          <!-- job -->
+                            <div class="col-lg-12">
                             <form class="form-floating">
                               <input type="email" class="form-control form-light" placeholder="Enter Your Job Title" value="Enter Your Job Title">
                               <label class="profile-label" for="floatingInputInvalid">Job title</label>
                             </form>
-                          </div>
-                          <!-- choose-file -->
-                          <div class="col-lg-6 d-flex">
+                            </div>
+                            <!-- choose-file -->
+                            <div class="col-lg-6 d-flex">
                             <div class="row choose-file-main">
                               <div class="col-lg-3">
-                                <div id="preview">
-                                  <img src="/layer1x/assets/images/picture.png" alt="avather">
-                                </div>
+                              <div id="preview">
+                                <img src="/layer1x/assets/images/picture.png" alt="avather">
+                              </div>
                               </div>
                               <div class="col-lg-9 ps-1">
-                                <label class="file">
-                                  <span class="choose-label">Company Logo</span>
-                                <input type="file" id="file" accept="image/*" aria-label="File browser">
-                                <span class="file-custom"></span>
-                                </label>
+                              <label class="file">
+                                <span class="choose-label">Company Logo</span>
+                              <input type="file" id="file" accept="image/*" aria-label="File browser">
+                              <span class="file-custom"></span>
+                              </label>
                               </div>
                             </div>
-                          </div>
-                          <!-- Company name -->
-                          <div class="col-lg-6">
+                            </div>
+                            <!-- Company name -->
+                            <div class="col-lg-6">
                             <form class="form-floating">
                               <input type="email" class="form-control" placeholder="Enter your company name" value="Enter your company name">
                               <label class="profile-label" for="floatingInputInvalid">Company name</label>
                             </form>
-                          </div>
-                          <!-- Company name -->
-                          <div class="col-lg-12">
+                            </div>
+                            <!-- Company name -->
+                            <div class="col-lg-12">
                             <form class="form-floating">
                               <input type="email" class="form-control" placeholder="Enter your company name" value="Enter your company name">
                               <label class="profile-label" for="floatingInputInvalid">Company name</label>
                             </form>
-                          </div>
-                          <!-- Employment start date -->
-                          <div class="col-lg-6">
+                            </div>
+                            <!-- Employment start date -->
+                            <div class="col-lg-6">
                             <form class="form-floating">
-                              <input type="date" class="form-control">
+                              <input type="text"  id='startDate' class="form-control" value="28 March 2009" />
+                              <span class="calender-icon"><i class="bi bi-calendar"></i></span>
                               <label class="profile-label" for="floatingInputInvalid">Employment start date</label>
                             </form>
-                          </div>
-                          <!-- Employment End date -->
-                          <div class="col-lg-6">
+                            </div>
+                            <!-- Employment End date -->
+                            <div class="col-lg-6">
                             <form class="form-floating">
-                              <input type="date" class="form-control">
+                              <input type="text"  id='endtDate' class="form-control" value="28 March 2020" />
+                              <span class="calender-icon"><i class="bi bi-calendar"></i></span>
                               <label class="profile-label" for="floatingInputInvalid">Employment end date</label>
                             </form>
-                          </div>
-                          <!-- commends -->
-                          <div class="col-lg-12">
+                            </div>
+                            <!-- commends -->
+                            <div class="col-lg-12">
                             <div class="form-floating">
                               <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 80px">The California Art Festival is a showcase of the best and brightest artists from across the state. From painters to sculptors, photographers to performance artists, this festival has it all.</textarea>
                               <label for="floatingTextarea2">Key responsibilities and achievements</label>
                             </div>
+                            </div>
                           </div>
+                          
+                        </div>
+                        <div class="btns">
+                          <a href="#" class="update-btn">Update</a>
+                        <a href="#" class="clear-btn">Clear</a>
+                        </div>
+                      
+                        <a class="extra-fields-customer" href="#">+ Add More Fields</a>
                       </div>
                       
-                    </div>
-                    <div class="btns">
-                      <a href="#" class="update-btn">Update</a>
-                    <a href="#" class="clear-btn">Clear</a>
-                    </div>
+                      <div class="customer_records_dynamic"></div>
+                      
+                      </div>
                   </div>
                   
                 </div>
@@ -420,8 +435,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
    
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="/layer1x/script.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+
+<script>
+  $('.extra-fields-customer').click(function() {
+    $('.customer_records').clone().appendTo('.customer_records_dynamic');
+    $('.customer_records_dynamic .customer_records').addClass('single remove');
+    $('.single .extra-fields-customer').remove();
+    $('.single').append('<a href="#" class="remove-field btn-remove-customer">Remove Fields</a>');
+    $('.customer_records_dynamic > .single').attr("class", "remove");
+  
+    $('.customer_records_dynamic input').each(function() {
+      var count = 0;
+      var fieldname = $(this).attr("name");
+      $(this).attr('name', fieldname + count);
+      count++;
+    });
+  
+  });
+  
+  $(document).on('click', '.remove-field', function(e) {
+    $(this).parent('.remove').remove();
+    e.preventDefault();
+  });
+  
+  </script>
 
 </body>
 </html>

@@ -888,12 +888,17 @@ input {
     }
 
     .chips-input {
-    border: 0px;
-    background: none;
-    margin-bottom: 5px;
-    display: inline-block;
-    margin-bottom: 0px;
-  }
+        border: 0px;
+        background: none;
+        margin-bottom: 5px;
+        display: inline-block;
+        margin-bottom: 0px;
+    }
+    .calender-icon {
+        position: absolute;
+        top: 25px;
+        right: 5px;
+    }
 
 /* responsive sections */
 @media (max-width:1256px) {
