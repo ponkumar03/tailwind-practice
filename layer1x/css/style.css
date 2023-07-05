@@ -443,9 +443,6 @@ h4 {
 }
 
 
-
-
-
 /* saidbar.css */
 .event-main-section {
     position: relative;
@@ -662,6 +659,7 @@ border-radius: 8px;
 .form-floating>label {
     top: -5px;
     padding-left: 0;
+    color: #808095 !important;
 }
 .form-floating>.form-control {
     border: none;
@@ -688,6 +686,10 @@ input::placeholder {
     row-gap: 16px;
   }
 /* choose-file css */
+input[type=file]::-webkit-file-upload-button{
+    visibility: hidden;
+    color: transparent;
+  }
 input {
     width: 100%;
    }
@@ -849,7 +851,7 @@ input {
     position: absolute;
     top: 0;
     left: 0;
-    color: #808095;
+    color: #808095 !important;
     font-size: 12px;
     font-family: Manrope;
  }
@@ -898,6 +900,25 @@ input {
         position: absolute;
         top: 25px;
         right: 5px;
+    }
+
+    .extra-fields-customer {
+        color: #4E1FA3;
+        font-size: 12px;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-decoration: none;
+    }
+    .remove-field {
+        color: #4E1FA3;
+        font-size: 12px;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-decoration: none;
     }
 
 /* responsive sections */
@@ -981,6 +1002,40 @@ input {
     }
    .register-btn {
     font-size: 18px;
+   }
+   .download-resume .share-btn,
+   .download-resume .resume-btn {
+    font-size: 14px;
+    padding: 8px 10px;
+   }
+   .progress-level p {
+    font-size: 18px;
+   }
+   .progress-level p span {
+    font-size: 10px;
+   }
+   .detail-content h6 {
+    font-size: 14px;
+   }
+   #preview {
+    width: 50px;
+    height: 50px;
+   }
+   .nav-tabs .nav-link {
+    font-size: 12px;
+    padding: 10px;
+   }
+   .form-floating>.form-control:not(:placeholder-shown) {
+    font-size: 12px;
+   }
+   .file-custom::after {
+    font-size: 12px;
+   }
+   .choose-label {
+    top: 4px;
+   }
+   .file {
+    margin-left: 10px;
    }
 }
 

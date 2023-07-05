@@ -94,7 +94,7 @@
                         </div>
                     </div>
                     </div>
-                </div>
+                </div>                
                 <div class="download-resume col-lg-6 d-flex align-items-center justify-content-end">
                   <div class="dropdown">
                     <a class="share-btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -144,6 +144,13 @@
                   <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Contact Information</button>
                   <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Skills</button>
                   <button class="nav-link" id="nav-work-tab" data-bs-toggle="tab" data-bs-target="#nav-work" type="button" role="tab" aria-controls="nav-work" aria-selected="false">Work Experience</button>
+                  <button class="nav-link" id="nav-project-tab" data-bs-toggle="tab" data-bs-target="#nav-project" type="button" role="tab" aria-controls="nav-project" aria-selected="false">Projects and Portfolio</button>
+                  <button class="nav-link" id="nav-education-tab" data-bs-toggle="tab" data-bs-target="#nav-education" type="button" role="tab" aria-controls="nav-education" aria-selected="false">Education</button>
+                  <button class="nav-link" id="nav-awards-tab" data-bs-toggle="tab" data-bs-target="#nav-awards" type="button" role="tab" aria-controls="nav-awards" aria-selected="false">Awards</button>
+                  <button class="nav-link" id="nav-publication-tab" data-bs-toggle="tab" data-bs-target="#nav-publication" type="button" role="tab" aria-controls="nav-publication" aria-selected="false">Publications and Talks</button>
+                  <button class="nav-link" id="nav-experience-tab" data-bs-toggle="tab" data-bs-target="#nav-experience" type="button" role="tab" aria-controls="nav-experience" aria-selected="false">Volunteer Experience</button>
+                  <button class="nav-link" id="nav-testimonials-tab" data-bs-toggle="tab" data-bs-target="#nav-testimonials" type="button" role="tab" aria-controls="nav-testimonials" aria-selected="false">Testimonials</button>
+                  <button class="nav-link" id="nav-call-to-action-tab" data-bs-toggle="tab" data-bs-target="#nav-call-to-action" type="button" role="tab" aria-controls="nav-call-to-action" aria-selected="false">Call-to-Action</button>
                 </div>
               </nav>
             </div>
@@ -166,8 +173,7 @@
                           <div class="row choose-file-main">
                             <div class="col-lg-3">
                               <div id="preview">
-                                <img src="/layer1x/assets/images/hero-icon.png" alt="avather" width="60"
-                                height="60">
+                                <img src="/layer1x/assets/images/hero-icon.png" alt="avather" class="img-fluid">
                               </div>
                             </div>
                             <div class="col-lg-9 ps-1">
@@ -350,7 +356,7 @@
                           <!-- job -->
                             <div class="col-lg-12">
                             <form class="form-floating">
-                              <input type="email" class="form-control form-light" placeholder="Enter Your Job Title" value="Enter Your Job Title">
+                              <input type="text" class="form-control form-light" placeholder="Enter Your Job Title" value="Enter Your Job Title">
                               <label class="profile-label" for="floatingInputInvalid">Job title</label>
                             </form>
                             </div>
@@ -374,17 +380,17 @@
                             <!-- Company name -->
                             <div class="col-lg-6">
                             <form class="form-floating">
-                              <input type="email" class="form-control" placeholder="Enter your company name" value="Enter your company name">
+                              <input type="text" class="form-control" placeholder="Enter your company name" value="Enter your company name">
                               <label class="profile-label" for="floatingInputInvalid">Company name</label>
                             </form>
                             </div>
                             <!-- Company name -->
                             <div class="col-lg-12">
-                            <form class="form-floating">
-                              <input type="email" class="form-control" placeholder="Enter your company name" value="Enter your company name">
-                              <label class="profile-label" for="floatingInputInvalid">Company name</label>
-                            </form>
-                            </div>
+                              <form class="form-floating">
+                                <input type="text" class="form-control form-light" placeholder="Enter your company name" value="Enter your company name">
+                                <label class="profile-label" for="floatingInputInvalid">Company name</label>
+                              </form>
+                              </div>
                             <!-- Employment start date -->
                             <div class="col-lg-6">
                             <form class="form-floating">
@@ -408,20 +414,343 @@
                               <label for="floatingTextarea2">Key responsibilities and achievements</label>
                             </div>
                             </div>
+                            <div class="col-lg-12">
+                              <!-- Add more button -->
+                              <a class="extra-fields-customer" href="#">+ Add More Fields</a>
+                            </div>
+                          </div>
+                          
+                        </div>                      
+                      </div>
+                      <!-- Add more field width remove button -->
+                      <div class="customer_records_dynamic"></div>
+
+                     <!-- Update button and Reset button -->
+                      <div class="btns">
+                        <a href="#" class="update-btn">Update</a>
+                      <a href="#" class="clear-btn">Clear</a>
+                      </div>                     
+                      </div>
+                  </div>
+
+                  <!-- Projects and Potrfolio section -->
+                  <div class="tab-pane fade" id="nav-project" role="tabpanel" aria-labelledby="nav-project-tab">
+                    <div class="row">
+                      <div class="customer_records">
+                        <h6>Projects</h6>
+                        <div class="information-field">
+                          <div class="row main-information">
+                          <!-- job -->
+                            <div class="col-lg-12">
+                            <form class="form-floating">
+                              <input type="text" class="form-control form-light" placeholder="Enter Your Project name" value="Enter Your Project name">
+                              <label class="profile-label" for="floatingInputInvalid">Project name</label>
+                            </form>
+                            </div>
+                            <!-- commends -->
+                            <div class="col-lg-12">
+                            <div class="form-floating">
+                              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 80px">The California Art Festival is a showcase of the best and brightest artists from across the state. From painters to sculptors, photographers to performance artists, this festival has it all.</textarea>
+                              <label for="floatingTextarea2">Short description</label>
+                            </div>
+                            </div>
+                            <!-- Technologies used -->
+                            <div class="col-lg-12">
+                              <div class="d-flex align-items-center chips-main">
+                                <label class="chips-lable" for="txt">Technologies used</label>
+                                <ul id="list" class="chips-list list"></ul>                           
+                                <input class="chips-input txt" type="text" id="txt" placeholder="">
+                              </div>
+                            </div>
+                            <!-- Link to live project -->
+                            <div class="col-lg-12">
+                              <form class="form-floating">
+                                <input type="email" class="form-control form-light" placeholder="Enter your Link" value="Enter your Link">
+                                <label class="profile-label" for="floatingInputInvalid">Link to live project or GitHub repository</label>
+                              </form>
+                              </div>
+                            <div class="col-lg-12">
+                              <!-- Add more button -->
+                              <a class="extra-fields-customer" href="#">+ Add More Fields</a>
+                            </div>
+                          </div>
+                          
+                        </div>                      
+                      </div>
+                      <!-- Add more field width remove button -->
+                      <div class="customer_records_dynamic"></div>
+
+                     <!-- Update button and Reset button -->
+                      <div class="btns">
+                        <a href="#" class="update-btn">Update</a>
+                      <a href="#" class="clear-btn">Clear</a>
+                      </div>                     
+                      </div>
+                  </div>
+
+                  <!-- Education section -->
+                  <div class="tab-pane fade" id="nav-education" role="tabpanel" aria-labelledby="nav-education-tab">
+                    <div class="row">
+                      <div class="customer_records">
+                        <h6>Education</h6>
+                        <div class="information-field">
+                          <div class="row main-information">
+                          <!-- Degree or certification-->
+                            <div class="col-lg-12">
+                            <form class="form-floating">
+                              <input type="text" class="form-control form-light" placeholder="Enter your Degree or certification" value="Enter your Degree or certification">
+                              <label class="profile-label" for="floatingInputInvalid">Degree or certification</label>
+                            </form>
+                            </div>
+                            <!-- Institution name-->
+                            <div class="col-lg-12">
+                              <form class="form-floating">
+                                <input type="text" class="form-control form-light" placeholder="Enter your Institution name" value="Enter your Institution name">
+                                <label class="profile-label" for="floatingInputInvalid">Institution name</label>
+                              </form>
+                            </div>
+                            <!-- Graduation date -->
+                            <div class="col-lg-6">
+                              <form class="form-floating">
+                                <input type="text"  id='startDate' class="form-control" value="28 March 2009" />
+                                <span class="calender-icon"><i class="bi bi-calendar"></i></span>
+                                <label class="profile-label" for="floatingInputInvalid">Graduation date</label>
+                              </form>
+                            </div>
+                              <!--Relevant coursework (optional) -->
+                            <div class="col-lg-6">
+                              <form class="form-floating">
+                                <input type="text" class="form-control form-light" placeholder="Enter your Relevant coursework" value="Enter your Relevant coursework">
+                                <label class="profile-label" for="floatingInputInvalid">Relevant coursework (optional)</label>
+                              </form>
+                            </div>
+                            <div class="col-lg-12">
+                              <!-- Add more button -->
+                              <a class="extra-fields-customer" href="#">+ Add More Fields</a>
+                            </div>
+                          </div>
+                          
+                        </div>                      
+                      </div>
+                      <!-- Add more field width remove button -->
+                      <div class="customer_records_dynamic"></div>
+
+                     <!-- Update button and Reset button -->
+                      <div class="btns">
+                        <a href="#" class="update-btn">Update</a>
+                      <a href="#" class="clear-btn">Clear</a>
+                      </div>                     
+                      </div>
+                  </div>
+
+                  <!-- Awards and Recognitions section -->
+                  <div class="tab-pane fade" id="nav-awards" role="tabpanel" aria-labelledby="nav-awards-tab">
+                    <div class="row">
+                      <h6>Awards and Recognitions</h6>
+                        <div class="information-field">
+                          <div class="row main-information">
+                          <!--Award title-->
+                            <div class="col-lg-12">
+                            <form class="form-floating">
+                              <input type="text" class="form-control form-light" placeholder="Enter your Award title" value="Enter your Award title">
+                              <label class="profile-label" for="floatingInputInvalid">Award title</label>
+                            </form>
+                            </div>
+                              <!--Granting organization -->
+                            <div class="col-lg-6">
+                              <form class="form-floating">
+                                <input type="text" class="form-control form-light" placeholder="Enter your Granting organization" value="Enter your Granting organization">
+                                <label class="profile-label" for="floatingInputInvalid">Granting organization</label>
+                              </form>
+                            </div>
+                              <!-- Date received -->
+                              <div class="col-lg-6">
+                                <form class="form-floating">
+                                  <input type="text"  id='startDate' class="form-control" value="28 March 2009" />
+                                  <span class="calender-icon"><i class="bi bi-calendar"></i></span>
+                                  <label class="profile-label" for="floatingInputInvalid">Date received</label>
+                                </form>
+                              </div>
+                              <!-- Brief description-->
+                              <div class="col-lg-12">
+                                <div class="form-floating">
+                                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 80px">The California Art Festival is a showcase of the best and brightest artists from across the state. From painters to sculptors, photographers to performance artists, this festival has it all.</textarea>
+                                  <label for="floatingTextarea2">Brief description</label>
+                                </div>
+                              </div>
                           </div>
                           
                         </div>
-                        <div class="btns">
-                          <a href="#" class="update-btn">Update</a>
-                        <a href="#" class="clear-btn">Clear</a>
+                     <!-- Update button and Reset button -->
+                      <div class="btns">
+                        <a href="#" class="update-btn">Update</a>
+                      <a href="#" class="clear-btn">Clear</a>
+                      </div>                     
+                      </div>
+                  </div>
+
+                  <!-- Publications and Talks section -->
+                  <div class="tab-pane fade" id="nav-publication" role="tabpanel" aria-labelledby="nav-publication-tab">
+                    <div class="row">
+                      <h6>Publications and Talks</h6>
+                        <div class="information-field">
+                          <div class="row main-information">
+                          <!--Publication or talk title-->
+                            <div class="col-lg-12">
+                            <form class="form-floating">
+                              <input type="text" class="form-control form-light" placeholder="Enter your Publication or talk title" value="Enter your Publication or talk title">
+                              <label class="profile-label" for="floatingInputInvalid">Publication or talk title</label>
+                            </form>
+                            </div>
+                              <!--Event or journal name -->
+                            <div class="col-lg-6">
+                              <form class="form-floating">
+                                <input type="text" class="form-control form-light" placeholder="Enter your Event or journal name" value="Enter your Event or journal name">
+                                <label class="profile-label" for="floatingInputInvalid">Event or journal name</label>
+                              </form>
+                            </div>
+                              <!-- Date -->
+                              <div class="col-lg-6">
+                                <form class="form-floating">
+                                  <input type="text"  id='startDate' class="form-control" value="28 March 2009" />
+                                  <span class="calender-icon"><i class="bi bi-calendar"></i></span>
+                                  <label class="profile-label" for="floatingInputInvalid">Date</label>
+                                </form>
+                              </div>
+                              <!-- Link to publication or presentation-->
+                              <div class="col-lg-12">
+                                <form class="form-floating">
+                                  <input type="text" class="form-control form-light" placeholder="Enter your Link to publication or presentation" value="Enter your Link to publication or presentation">
+                                  <label class="profile-label" for="floatingInputInvalid">Link to publication or presentation</label>
+                                </form>
+                              </div>
+                          </div>
+                          
                         </div>
-                      
-                        <a class="extra-fields-customer" href="#">+ Add More Fields</a>
+                     <!-- Update button and Reset button -->
+                      <div class="btns">
+                        <a href="#" class="update-btn">Update</a>
+                      <a href="#" class="clear-btn">Clear</a>
+                      </div>                     
                       </div>
-                      
+                  </div>
+
+                  <!-- Volunteer Experience section -->
+                  <div class="tab-pane fade" id="nav-experience" role="tabpanel" aria-labelledby="nav-experience-tab">
+                    <div class="row">
+                      <div class="customer_records">
+                        <h6>Volunteer Experience</h6>
+                        <div class="information-field">
+                          <div class="row main-information">
+                          <!-- Degree or certification-->
+                            <div class="col-lg-12">
+                            <form class="form-floating">
+                              <input type="text" class="form-control form-light" placeholder="Enter your Organization name" value="Enter your Organization name">
+                              <label class="profile-label" for="floatingInputInvalid">Organization name</label>
+                            </form>
+                            </div>  
+                              <!--Volunteer role -->
+                              <div class="col-lg-6">
+                                <form class="form-floating">
+                                  <input type="text" class="form-control form-light" placeholder="Enter your Volunteer role" value="Enter your Volunteer role">
+                                  <label class="profile-label" for="floatingInputInvalid">Volunteer role</label>
+                                </form>
+                              </div>                   
+                            <!-- Period of involvement -->
+                            <div class="col-lg-6">
+                              <form class="form-floating">
+                                <input type="text"  id='startDate' class="form-control" value="28 March 2009" />
+                                <span class="calender-icon"><i class="bi bi-calendar"></i></span>
+                                <label class="profile-label" for="floatingInputInvalid">Period of involvement</label>
+                              </form>
+                            </div>                            
+                             <!-- Key activities and contributions-->
+                             <div class="col-lg-12">
+                              <form class="form-floating">
+                                <input type="text" class="form-control form-light" placeholder="Enter your Key activities and contributions" value="Enter your Key activities and contributions">
+                                <label class="profile-label" for="floatingInputInvalid">Key activities and contributions</label>
+                              </form>
+                            </div>
+                             <!-- Add more button -->
+                            <div class="col-lg-12">                             
+                              <a class="extra-fields-customer" href="#">+ Add More Fields</a>
+                            </div>
+                          </div>
+                          
+                        </div>                      
+                      </div>
+                      <!-- Add more field width remove button -->
                       <div class="customer_records_dynamic"></div>
-                      
+
+                     <!-- Update button and Reset button -->
+                      <div class="btns">
+                        <a href="#" class="update-btn">Update</a>
+                      <a href="#" class="clear-btn">Clear</a>
+                      </div>                     
                       </div>
+                  </div>
+
+                  <!-- Testimonials section -->
+                  <div class="tab-pane fade" id="nav-testimonials" role="tabpanel" aria-labelledby="nav-testimonials-tab">
+                    <div class="row">
+                      <h6>Testimonials</h6>
+                        <div class="information-field">
+                          <div class="row main-information">
+                          <!--Name of the person-->
+                            <div class="col-lg-12">
+                            <form class="form-floating">
+                              <input type="text" class="form-control form-light" placeholder="Enter Name of the person providing the testimonial" value="Enter Name of the person providing the testimonial">
+                              <label class="profile-label" for="floatingInputInvalid">Name of the person</label>
+                            </form>
+                            </div>
+                              <!--Role of the person -->
+                            <div class="col-lg-6">
+                              <form class="form-floating">
+                                <input type="text" class="form-control form-light" placeholder="Enter  role of the person providing the testimonial" value="Enter  role of the person providing the testimonial">
+                                <label class="profile-label" for="floatingInputInvalid">Role of the person</label>
+                              </form>
+                            </div>
+                              <!-- choose-file -->
+                            <div class="col-lg-6 d-flex">
+                              <div class="row choose-file-main">
+                                <div class="col-lg-3">
+                                <div id="preview">
+                                  <img src="/layer1x/assets/images/picture.png" alt="avather">
+                                </div>
+                                </div>
+                                <div class="col-lg-9 ps-1">
+                                <label class="file">
+                                  <span class="choose-label">Company Logo</span>
+                                <input type="file" id="file" accept="image/*" aria-label="File browser">
+                                <span class="file-custom"></span>
+                                </label>
+                                </div>
+                              </div>
+                              </div>
+                              <!-- Link to publication or presentation-->
+                              <div class="col-lg-12">
+                                <form class="form-floating">
+                                  <input type="text" class="form-control form-light" placeholder="Enter your Quotes from clients, managers, or colleagues" value="Enter your Quotes from clients, managers, or colleagues">
+                                  <label class="profile-label" for="floatingInputInvalid">Quotes from clients, managers, or colleagues</label>
+                                </form>
+                              </div>
+                          </div>
+                          
+                        </div>
+                     <!-- Update button and Reset button -->
+                      <div class="btns">
+                        <a href="#" class="update-btn">Update</a>
+                      <a href="#" class="clear-btn">Clear</a>
+                      </div>                     
+                      </div>
+                  </div>
+
+                   <!-- Call-to-Action -->
+                   <div class="tab-pane fade" id="nav-call-to-action" role="tabpanel" aria-labelledby="nav-call-to-action-tab">
+                    <div class="row">
+                      <h6>Call-to-Action</h6>
+                                            
+                    </div>
                   </div>
                   
                 </div>
@@ -432,37 +761,13 @@
       </section>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
    
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-
-
-<script>
-  $('.extra-fields-customer').click(function() {
-    $('.customer_records').clone().appendTo('.customer_records_dynamic');
-    $('.customer_records_dynamic .customer_records').addClass('single remove');
-    $('.single .extra-fields-customer').remove();
-    $('.single').append('<a href="#" class="remove-field btn-remove-customer">Remove Fields</a>');
-    $('.customer_records_dynamic > .single').attr("class", "remove");
-  
-    $('.customer_records_dynamic input').each(function() {
-      var count = 0;
-      var fieldname = $(this).attr("name");
-      $(this).attr('name', fieldname + count);
-      count++;
-    });
-  
-  });
-  
-  $(document).on('click', '.remove-field', function(e) {
-    $(this).parent('.remove').remove();
-    e.preventDefault();
-  });
-  
-  </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <script src="/layer1x/script.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>How To Add Bootstrap 5 Datepicker - Techsolutionstuff</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">		
+		<style>
+			@media (max-width: 991px) {
+				.tab-content>.tab-pane {
+					display: block;
+					opacity: 1;
+				}
+			}
+		</style>
+		<link rel="stylesheet" href="/layer1x/css/style.css">
+	</head>
+<body>
+<section class="container">
+	<div class="row">
+		<div class="col-lg-3">
+			<ul class="nav nav-tabs d-none d-lg-flex profile-tabs" id="myTab" role="tablist">
+				<li class="nav-item" role="presentation">
+				  <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Basic Information</button>
+				  <!-- <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button> -->
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Contact Information</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Skills</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="nav-work-tab" data-bs-toggle="tab" data-bs-target="#nav-work" type="button" role="tab" aria-controls="nav-work" aria-selected="false">Work Experience</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="nav-project-tab" data-bs-toggle="tab" data-bs-target="#nav-project" type="button" role="tab" aria-controls="nav-project" aria-selected="false">Projects and Portfolio</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="nav-education-tab" data-bs-toggle="tab" data-bs-target="#nav-education" type="button" role="tab" aria-controls="nav-education" aria-selected="false">Education</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="nav-awards-tab" data-bs-toggle="tab" data-bs-target="#nav-awards" type="button" role="tab" aria-controls="nav-awards" aria-selected="false">Awards</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="nav-publication-tab" data-bs-toggle="tab" data-bs-target="#nav-publication" type="button" role="tab" aria-controls="nav-publication" aria-selected="false">Publications and Talks</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="nav-experience-tab" data-bs-toggle="tab" data-bs-target="#nav-experience" type="button" role="tab" aria-controls="nav-experience" aria-selected="false">Volunteer Experience</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="nav-testimonials-tab" data-bs-toggle="tab" data-bs-target="#nav-testimonials" type="button" role="tab" aria-controls="nav-testimonials" aria-selected="false">Testimonials</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="nav-call-to-action-tab" data-bs-toggle="tab" data-bs-target="#nav-call-to-action" type="button" role="tab" aria-controls="nav-call-to-action" aria-selected="false">Call-to-Action</button>
+				</li>
+			  </ul>
+		</div>
+		<div class="col-lg-9">			
+			<div class="tab-content accordion" id="myTabContent">
+				<!-- Basic Information section -->
+				<div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">			  
+				  <h2 class="accordion-header d-lg-none" id="headingOne">
+					<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Accordion Item #1</button>
+				  </h2>
+				  <div id="collapseOne" class="accordion-collapse collapse show  d-lg-block" aria-labelledby="headingOne" data-bs-parent="#myTabContent">
+					<div class="accordion-body">
+						<h6>Basic Information</h6>
+						<div class="information-field">
+						  <div class="row main-information">
+							<!-- user-name -->
+							  <div class="col-lg-12">
+								<form class="form-floating">
+								  <input type="email" class="form-control form-light" placeholder="Enter Developer’s Name " value="Enter Developer’s Name">
+								  <label class="profile-label" for="floatingInputInvalid">Developer's Full Name</label>
+								</form>
+							  </div>
+							  <!-- choose-file -->
+							  <div class="col-lg-6 d-flex">
+								<div class="row choose-file-main">
+								  <div class="col-lg-3">
+									<div id="preview">
+									  <img src="/layer1x/assets/images/hero-icon.png" alt="avather" class="img-fluid">
+									</div>
+								  </div>
+								  <div class="col-lg-9 ps-1">
+									<label class="file">
+									  <span class="choose-label">Profile Picture</span>
+									<input type="file" id="file" accept="image/*" aria-label="File browser">
+									<span class="file-custom"></span>
+									</label>
+								  </div>
+								</div>
+							  </div>
+							  <!-- job-title -->
+							  <div class="col-lg-6">
+								<form class="form-floating">
+								  <input type="email" class="form-control" placeholder="User Interface Designer" value="User Interface Designer">
+								  <label class="profile-label" for="floatingInputInvalid">Job title</label>
+								</form>
+							  </div>
+							  <!-- location -->
+							  <div class="col-lg-6">
+								<form class="form-floating">
+								  <input type="text" class="form-control" placeholder="2118 Thornridge Cir" value="2118 Thornridge Cir">
+								  <label class="profile-label" for="floatingInputInvalid">Location</label>
+								</form>
+							  </div>
+							  <!-- work-status -->
+							  <div class="col-lg-6">
+								<form class="form-floating">
+								  <input type="text" class="form-control" placeholder="Visible to everyone" value="Visible to everyone">
+								  <label class="profile-label" for="floatingInputInvalid">Open to Work Status</label>
+								</form>
+							  </div>
+							  <!-- commends -->
+							  <div class="col-lg-12">
+								<div class="form-floating">
+								  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 80px">The California Art Festival is a showcase of the best and brightest artists from across the state. From painters to sculptors, photographers to performance artists, this festival has it all.</textarea>
+								  <label for="floatingTextarea2">Comments</label>
+								</div>
+							  </div>
+						  </div>
+						  
+						</div>
+						<div class="btns">
+						  <a href="#" class="update-btn">Update</a>
+						<a href="#" class="clear-btn">Clear</a>
+						</div>
+					</div>
+				  </div>
+				</div>
+				<!-- Contact Information section -->
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+					<h2 class="accordion-header d-lg-none" id="headingTwo">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+					  Accordion Item #2
+					</button>
+				  </h2>
+				  <div id="collapseTwo" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingTwo" data-bs-parent="#myTabContent">
+					<div class="accordion-body">
+						<h6>Contact Information</h6>
+						<div class="information-field">
+						  <div class="row main-information">
+							<!-- Email-address -->
+							  <div class="col-lg-12">
+								<form class="form-floating">
+								  <input type="email" class="form-control" placeholder="jessica.hanson@blockchain.com " value="jessica.hanson@blockchain.com">
+								  <label class="profile-label" for="floatingInputInvalid">Email address</label>
+								</form>
+							  </div>
+							  <!-- Phone number -->
+							  <div class="col-lg-6">
+								<form class="form-floating">
+								  <input type="tel" class="form-control" placeholder="(307) 555-0133" value="(307) 555-0133">
+								  <label class="profile-label" for="floatingInputInvalid">Phone number</label>
+								</form>
+							  </div>
+							  <!-- Personal website -->
+							  <div class="col-lg-6">
+								<form class="form-floating">
+								  <input type="url" class="form-control" placeholder="github.com/jessica.hanson" value="github.com/jessica.hanson">
+								  <label class="profile-label" for="floatingInputInvalid">Personal website or blog</label>
+								</form>
+							  </div>
+							  <!-- github -->
+							  <div class="col-lg-12">
+								<div class="git-main">
+								  <h6><i class="bi bi-github"></i> GitHub</h6>
+								<form class="form-floating">
+								  <input type="url" class="form-control" placeholder="github.com/jessica.hanson" value="github.com/jessica.hanson">
+								  <label class="profile-label" for="floatingInputInvalid">Profile link</label>
+								</form>
+								</div>
+							  </div>
+							  <!-- stack overflow -->
+							  <div class="col-lg-12">
+								<div class="stack-main">
+								  <h6><i class="bi bi-stack-overflow"></i> Stack Overflow</h6>
+								<form class="form-floating">
+								  <input type="url" class="form-control" placeholder="github.com/jessica.hanson" value="github.com/jessica.hanson">
+								  <label class="profile-label" for="floatingInputInvalid">Profile link</label>
+								</form>
+								</div>
+							  </div>
+							  <!-- Linkedin -->
+							  <div class="col-lg-12">
+								<div class="linked-main">
+								  <h6><i class="bi bi-linkedin"></i> LinkedIn</h6>
+								<form class="form-floating">
+								  <input type="url" class="form-control" placeholder="linkedin.com/jessica.hanson" value="linkedin.com/jessica.hanson">
+								  <label class="profile-label" for="floatingInputInvalid">Profile link</label>
+								</form>
+								</div>
+							  </div>
+							  <!-- Facebook -->
+							  <div class="col-lg-12">
+								<div class="facebook-main">
+								  <h6><i class="bi bi-facebook"></i> Facebook</h6>
+								<form class="form-floating">
+								  <input type="url" class="form-control" placeholder="facebook.com/in/jessica.hanson" value="facebook.com/in/jessica.hanson">
+								  <label class="profile-label" for="floatingInputInvalid">Profile link</label>
+								</form>
+								</div>
+							  </div>
+							  <!-- Instagram -->
+							  <div class="col-lg-12">
+								<div class="instagram-main">
+								  <h6><i class="bi bi-instagram"></i> Instagram</h6>
+								<form class="form-floating">
+								  <input type="url" class="form-control" placeholder="instagram.com/jessica.hanson" value="instagram.com/jessica.hanson">
+								  <label class="profile-label" for="floatingInputInvalid">Profile link</label>
+								</form>
+								</div>
+							  </div>
+	  
+						  </div>
+						</div>
+						<div class="btns">
+						  <a href="#" class="update-btn">Update</a>
+						<a href="#" class="clear-btn">Clear</a>
+						</div>					</div>
+				  </div>
+				</div>
+				<!-- Skills section -->
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+					<h2 class="accordion-header d-lg-none" id="headingThree">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+					  Accordion Item #3
+					</button>
+				  </h2>
+				  <div id="collapseThree" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingThree" data-bs-parent="#myTabContent">
+					<div class="accordion-body">
+						<h6>Skills</h6>
+						<div class="information-field">
+						  <div class="row main-information">
+							<!-- Email-address -->
+							  <div class="col-lg-12">
+								  <div class="d-flex align-items-center chips-main">
+									<label class="chips-lable" for="txt">Programming languages</label>
+									<ul id="list" class="chips-list list"></ul>                           
+									<input class="chips-input txt" type="text" id="txt" placeholder="">
+								  </div>
+								</div>
+	  
+								<div class="col-lg-12">
+								  <div class="d-flex align-items-center chips-main">
+									<label class="chips-lable" for="txt">Frameworks and libraries</label>
+									<ul id="list" class="chips-list"></ul>                           
+									<input class="chips-input" type="text" id="txt" placeholder="">
+								  </div>
+								</div>
+								<div class="col-lg-12">
+								  <div class="d-flex align-items-center chips-main">
+									<label class="chips-lable" for="txt">Tools and platforms</label>
+									<ul id="list" class="chips-list"></ul>                           
+									<input class="chips-input" type="text" id="txt" placeholder="">
+								  </div>
+								</div>
+								<div class="col-lg-12">
+								  <div class="d-flex align-items-center chips-main">
+									<label class="chips-lable" for="txt">Soft skills</label>                          
+									<input class="chips-input" type="text" id="txt" placeholder="Communication, teamwork, problem-solving, etc.">
+								  </div>
+								</div>
+							  </div>
+						  </div>
+						  <div class="btns">
+							<a href="#" class="update-btn">Update</a>
+							<a href="#" class="clear-btn">Clear</a>
+						  </div>
+						</div>
+				  </div>
+				</div>
+			  <!-- Work Experience-section -->
+				<div class="tab-pane fade" id="nav-work" role="tabpanel" aria-labelledby="nav-work-tab">
+					<h2 class="accordion-header d-lg-none" id="headingFour">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+					  Accordion Item #4
+					</button>
+				  </h2>
+				  <div id="collapseFour" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingFour" data-bs-parent="#myTabContent">
+					<div class="accordion-body">
+						<div class="row">
+							<div class="customer_records">
+							  <h6>Work Experience</h6>
+							  <div class="information-field">
+								<div class="row main-information">
+								<!-- job -->
+								  <div class="col-lg-12">
+								  <form class="form-floating">
+									<input type="text" class="form-control form-light" placeholder="Enter Your Job Title" value="Enter Your Job Title">
+									<label class="profile-label" for="floatingInputInvalid">Job title</label>
+								  </form>
+								  </div>
+								  <!-- choose-file -->
+								  <div class="col-lg-6 d-flex">
+								  <div class="row choose-file-main">
+									<div class="col-lg-3">
+									<div id="preview">
+									  <img src="/layer1x/assets/images/picture.png" alt="avather">
+									</div>
+									</div>
+									<div class="col-lg-9 ps-1">
+									<label class="file">
+									  <span class="choose-label">Company Logo</span>
+									<input type="file" id="file" accept="image/*" aria-label="File browser">
+									<span class="file-custom"></span>
+									</label>
+									</div>
+								  </div>
+								  </div>
+								  <!-- Company name -->
+								  <div class="col-lg-6">
+								  <form class="form-floating">
+									<input type="text" class="form-control" placeholder="Enter your company name" value="Enter your company name">
+									<label class="profile-label" for="floatingInputInvalid">Company name</label>
+								  </form>
+								  </div>
+								  <!-- Company name -->
+								  <div class="col-lg-12">
+									<form class="form-floating">
+									  <input type="text" class="form-control form-light" placeholder="Enter your company name" value="Enter your company name">
+									  <label class="profile-label" for="floatingInputInvalid">Company name</label>
+									</form>
+									</div>
+								  <!-- Employment start date -->
+								  <div class="col-lg-6">
+								  <form class="form-floating">
+									<input type="text"  id='startDate' class="form-control" value="28 March 2009" />
+									<span class="calender-icon"><i class="bi bi-calendar"></i></span>
+									<label class="profile-label" for="floatingInputInvalid">Employment start date</label>
+								  </form>
+								  </div>
+								  <!-- Employment End date -->
+								  <div class="col-lg-6">
+								  <form class="form-floating">
+									<input type="text"  id='endtDate' class="form-control" value="28 March 2020" />
+									<span class="calender-icon"><i class="bi bi-calendar"></i></span>
+									<label class="profile-label" for="floatingInputInvalid">Employment end date</label>
+								  </form>
+								  </div>
+								  <!-- commends -->
+								  <div class="col-lg-12">
+								  <div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 80px">The California Art Festival is a showcase of the best and brightest artists from across the state. From painters to sculptors, photographers to performance artists, this festival has it all.</textarea>
+									<label for="floatingTextarea2">Key responsibilities and achievements</label>
+								  </div>
+								  </div>
+								  <div class="col-lg-12">
+									<!-- Add more button -->
+									<a class="extra-fields-customer" href="#">+ Add More Fields</a>
+								  </div>
+								</div>
+								
+							  </div>                      
+							</div>
+							<!-- Add more field width remove button -->
+							<div class="customer_records_dynamic"></div>
+	  
+						   <!-- Update button and Reset button -->
+							<div class="btns">
+							  <a href="#" class="update-btn">Update</a>
+							<a href="#" class="clear-btn">Clear</a>
+							</div>                     
+							</div>
+						</div>
+				  </div>
+				</div>
+			  <!-- Projects and Potrfolio section -->
+				<div class="tab-pane fade" id="nav-project" role="tabpanel" aria-labelledby="nav-project-tab">
+					<h2 class="accordion-header d-lg-none" id="headingFive">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+					  Accordion Item #5
+					</button>
+				  </h2>
+				  <div id="collapseFive" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingFive" data-bs-parent="#myTabContent">
+					<div class="accordion-body">
+						<div class="row">
+							<div class="customer_records">
+							  <h6>Projects</h6>
+							  <div class="information-field">
+								<div class="row main-information">
+								<!-- job -->
+								  <div class="col-lg-12">
+								  <form class="form-floating">
+									<input type="text" class="form-control form-light" placeholder="Enter Your Project name" value="Enter Your Project name">
+									<label class="profile-label" for="floatingInputInvalid">Project name</label>
+								  </form>
+								  </div>
+								  <!-- commends -->
+								  <div class="col-lg-12">
+								  <div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 80px">The California Art Festival is a showcase of the best and brightest artists from across the state. From painters to sculptors, photographers to performance artists, this festival has it all.</textarea>
+									<label for="floatingTextarea2">Short description</label>
+								  </div>
+								  </div>
+								  <!-- Technologies used -->
+								  <div class="col-lg-12">
+									<div class="d-flex align-items-center chips-main">
+									  <label class="chips-lable" for="txt">Technologies used</label>
+									  <ul id="list" class="chips-list list"></ul>                           
+									  <input class="chips-input txt" type="text" id="txt" placeholder="">
+									</div>
+								  </div>
+								  <!-- Link to live project -->
+								  <div class="col-lg-12">
+									<form class="form-floating">
+									  <input type="email" class="form-control form-light" placeholder="Enter your Link" value="Enter your Link">
+									  <label class="profile-label" for="floatingInputInvalid">Link to live project or GitHub repository</label>
+									</form>
+									</div>
+								  <div class="col-lg-12">
+									<!-- Add more button -->
+									<a class="extra-fields-customer" href="#">+ Add More Fields</a>
+								  </div>
+								</div>
+								
+							  </div>                      
+							</div>
+							<!-- Add more field width remove button -->
+							<div class="customer_records_dynamic"></div>
+	  
+						   <!-- Update button and Reset button -->
+							<div class="btns">
+							  <a href="#" class="update-btn">Update</a>
+							<a href="#" class="clear-btn">Clear</a>
+							</div>                     
+							</div>
+						</div>
+				  </div>
+				</div>
+				<!-- Education section -->
+				<div class="tab-pane fade" id="nav-education" role="tabpanel" aria-labelledby="nav-education-tab">
+					<h2 class="accordion-header d-lg-none" id="headingSix">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+					  Accordion Item #6
+					</button>
+				  </h2>
+				  <div id="collapseSix" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingSix" data-bs-parent="#myTabContent">
+					<div class="accordion-body">
+						<div class="row">
+							<div class="customer_records">
+							  <h6>Education</h6>
+							  <div class="information-field">
+								<div class="row main-information">
+								<!-- Degree or certification-->
+								  <div class="col-lg-12">
+								  <form class="form-floating">
+									<input type="text" class="form-control form-light" placeholder="Enter your Degree or certification" value="Enter your Degree or certification">
+									<label class="profile-label" for="floatingInputInvalid">Degree or certification</label>
+								  </form>
+								  </div>
+								  <!-- Institution name-->
+								  <div class="col-lg-12">
+									<form class="form-floating">
+									  <input type="text" class="form-control form-light" placeholder="Enter your Institution name" value="Enter your Institution name">
+									  <label class="profile-label" for="floatingInputInvalid">Institution name</label>
+									</form>
+								  </div>
+								  <!-- Graduation date -->
+								  <div class="col-lg-6">
+									<form class="form-floating">
+									  <input type="text"  id='startDate' class="form-control" value="28 March 2009" />
+									  <span class="calender-icon"><i class="bi bi-calendar"></i></span>
+									  <label class="profile-label" for="floatingInputInvalid">Graduation date</label>
+									</form>
+								  </div>
+									<!--Relevant coursework (optional) -->
+								  <div class="col-lg-6">
+									<form class="form-floating">
+									  <input type="text" class="form-control form-light" placeholder="Enter your Relevant coursework" value="Enter your Relevant coursework">
+									  <label class="profile-label" for="floatingInputInvalid">Relevant coursework (optional)</label>
+									</form>
+								  </div>
+								  <div class="col-lg-12">
+									<!-- Add more button -->
+									<a class="extra-fields-customer" href="#">+ Add More Fields</a>
+								  </div>
+								</div>
+								
+							  </div>                      
+							</div>
+							<!-- Add more field width remove button -->
+							<div class="customer_records_dynamic"></div>
+	  
+						   <!-- Update button and Reset button -->
+							<div class="btns">
+							  <a href="#" class="update-btn">Update</a>
+							<a href="#" class="clear-btn">Clear</a>
+							</div>                     
+							</div>
+						</div>
+				  </div>
+				</div>
+			  <!-- Awards and Recognitions section -->
+				<div class="tab-pane fade" id="nav-awards" role="tabpanel" aria-labelledby="nav-awards-tab">
+					<h2 class="accordion-header d-lg-none" id="headingSeven">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+					  Accordion Item #7
+					</button>
+				  </h2>
+				  <div id="collapseSeven" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingSeven" data-bs-parent="#myTabContent">
+					<div class="accordion-body">
+						<div class="row">
+							<h6>Awards and Recognitions</h6>
+							  <div class="information-field">
+								<div class="row main-information">
+								<!--Award title-->
+								  <div class="col-lg-12">
+								  <form class="form-floating">
+									<input type="text" class="form-control form-light" placeholder="Enter your Award title" value="Enter your Award title">
+									<label class="profile-label" for="floatingInputInvalid">Award title</label>
+								  </form>
+								  </div>
+									<!--Granting organization -->
+								  <div class="col-lg-6">
+									<form class="form-floating">
+									  <input type="text" class="form-control form-light" placeholder="Enter your Granting organization" value="Enter your Granting organization">
+									  <label class="profile-label" for="floatingInputInvalid">Granting organization</label>
+									</form>
+								  </div>
+									<!-- Date received -->
+									<div class="col-lg-6">
+									  <form class="form-floating">
+										<input type="text"  id='startDate' class="form-control" value="28 March 2009" />
+										<span class="calender-icon"><i class="bi bi-calendar"></i></span>
+										<label class="profile-label" for="floatingInputInvalid">Date received</label>
+									  </form>
+									</div>
+									<!-- Brief description-->
+									<div class="col-lg-12">
+									  <div class="form-floating">
+										<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 80px">The California Art Festival is a showcase of the best and brightest artists from across the state. From painters to sculptors, photographers to performance artists, this festival has it all.</textarea>
+										<label for="floatingTextarea2">Brief description</label>
+									  </div>
+									</div>
+								</div>
+								
+							  </div>
+						   <!-- Update button and Reset button -->
+							<div class="btns">
+							  <a href="#" class="update-btn">Update</a>
+							<a href="#" class="clear-btn">Clear</a>
+							</div>                     
+							</div>
+						</div>
+				  </div>
+				</div>
+			  <!-- Publications and Talks section -->
+				<div class="tab-pane fade" id="nav-publication" role="tabpanel" aria-labelledby="nav-publication-tab">
+					<h2 class="accordion-header d-lg-none" id="headingEight">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+					  Accordion Item #8
+					</button>
+				  </h2>
+				  <div id="collapseEight" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingEight" data-bs-parent="#myTabContent">
+					<div class="accordion-body">
+						<div class="row">
+							<h6>Publications and Talks</h6>
+							  <div class="information-field">
+								<div class="row main-information">
+								<!--Publication or talk title-->
+								  <div class="col-lg-12">
+								  <form class="form-floating">
+									<input type="text" class="form-control form-light" placeholder="Enter your Publication or talk title" value="Enter your Publication or talk title">
+									<label class="profile-label" for="floatingInputInvalid">Publication or talk title</label>
+								  </form>
+								  </div>
+									<!--Event or journal name -->
+								  <div class="col-lg-6">
+									<form class="form-floating">
+									  <input type="text" class="form-control form-light" placeholder="Enter your Event or journal name" value="Enter your Event or journal name">
+									  <label class="profile-label" for="floatingInputInvalid">Event or journal name</label>
+									</form>
+								  </div>
+									<!-- Date -->
+									<div class="col-lg-6">
+									  <form class="form-floating">
+										<input type="text"  id='startDate' class="form-control" value="28 March 2009" />
+										<span class="calender-icon"><i class="bi bi-calendar"></i></span>
+										<label class="profile-label" for="floatingInputInvalid">Date</label>
+									  </form>
+									</div>
+									<!-- Link to publication or presentation-->
+									<div class="col-lg-12">
+									  <form class="form-floating">
+										<input type="text" class="form-control form-light" placeholder="Enter your Link to publication or presentation" value="Enter your Link to publication or presentation">
+										<label class="profile-label" for="floatingInputInvalid">Link to publication or presentation</label>
+									  </form>
+									</div>
+								</div>
+								
+							  </div>
+						   <!-- Update button and Reset button -->
+							<div class="btns">
+							  <a href="#" class="update-btn">Update</a>
+							<a href="#" class="clear-btn">Clear</a>
+							</div>                     
+							</div>
+						</div>
+				  </div>
+				</div>
+			  <!-- Volunteer Experience section -->
+				<div class="tab-pane fade" id="nav-experience" role="tabpanel" aria-labelledby="nav-experience-tab">
+					<h2 class="accordion-header d-lg-none" id="headingNine">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+					  Accordion Item #9
+					</button>
+				  </h2>
+				  <div id="collapseNine" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingNine" data-bs-parent="#myTabContent">
+					<div class="accordion-body">
+						<div class="row">
+							<div class="customer_records">
+							  <h6>Volunteer Experience</h6>
+							  <div class="information-field">
+								<div class="row main-information">
+								<!-- Degree or certification-->
+								  <div class="col-lg-12">
+								  <form class="form-floating">
+									<input type="text" class="form-control form-light" placeholder="Enter your Organization name" value="Enter your Organization name">
+									<label class="profile-label" for="floatingInputInvalid">Organization name</label>
+								  </form>
+								  </div>  
+									<!--Volunteer role -->
+									<div class="col-lg-6">
+									  <form class="form-floating">
+										<input type="text" class="form-control form-light" placeholder="Enter your Volunteer role" value="Enter your Volunteer role">
+										<label class="profile-label" for="floatingInputInvalid">Volunteer role</label>
+									  </form>
+									</div>                   
+								  <!-- Period of involvement -->
+								  <div class="col-lg-6">
+									<form class="form-floating">
+									  <input type="text"  id='startDate' class="form-control" value="28 March 2009" />
+									  <span class="calender-icon"><i class="bi bi-calendar"></i></span>
+									  <label class="profile-label" for="floatingInputInvalid">Period of involvement</label>
+									</form>
+								  </div>                            
+								   <!-- Key activities and contributions-->
+								   <div class="col-lg-12">
+									<form class="form-floating">
+									  <input type="text" class="form-control form-light" placeholder="Enter your Key activities and contributions" value="Enter your Key activities and contributions">
+									  <label class="profile-label" for="floatingInputInvalid">Key activities and contributions</label>
+									</form>
+								  </div>
+								   <!-- Add more button -->
+								  <div class="col-lg-12">                             
+									<a class="extra-fields-customer" href="#">+ Add More Fields</a>
+								  </div>
+								</div>
+								
+							  </div>                      
+							</div>
+							<!-- Add more field width remove button -->
+							<div class="customer_records_dynamic"></div>
+	  
+						   <!-- Update button and Reset button -->
+							<div class="btns">
+							  <a href="#" class="update-btn">Update</a>
+							<a href="#" class="clear-btn">Clear</a>
+							</div>                     
+							</div>
+						</div>
+				  </div>
+				</div>
+			  <!-- Testimonials section -->
+				<div class="tab-pane fade" id="nav-testimonials" role="tabpanel" aria-labelledby="nav-testimonials-tab">
+					<h2 class="accordion-header d-lg-none" id="headingTen">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+					  Accordion Item #10
+					</button>
+				  </h2>
+				  <div id="collapseTen" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingTen" data-bs-parent="#myTabContent">
+					<div class="accordion-body">
+						<div class="row">
+							<h6>Testimonials</h6>
+							  <div class="information-field">
+								<div class="row main-information">
+								<!--Name of the person-->
+								  <div class="col-lg-12">
+								  <form class="form-floating">
+									<input type="text" class="form-control form-light" placeholder="Enter Name of the person providing the testimonial" value="Enter Name of the person providing the testimonial">
+									<label class="profile-label" for="floatingInputInvalid">Name of the person</label>
+								  </form>
+								  </div>
+									<!--Role of the person -->
+								  <div class="col-lg-6">
+									<form class="form-floating">
+									  <input type="text" class="form-control form-light" placeholder="Enter  role of the person providing the testimonial" value="Enter  role of the person providing the testimonial">
+									  <label class="profile-label" for="floatingInputInvalid">Role of the person</label>
+									</form>
+								  </div>
+									<!-- choose-file -->
+								  <div class="col-lg-6 d-flex">
+									<div class="row choose-file-main">
+									  <div class="col-lg-3">
+									  <div id="preview">
+										<img src="/layer1x/assets/images/picture.png" alt="avather">
+									  </div>
+									  </div>
+									  <div class="col-lg-9 ps-1">
+									  <label class="file">
+										<span class="choose-label">Company Logo</span>
+									  <input type="file" id="file" accept="image/*" aria-label="File browser">
+									  <span class="file-custom"></span>
+									  </label>
+									  </div>
+									</div>
+									</div>
+									<!-- Link to publication or presentation-->
+									<div class="col-lg-12">
+									  <form class="form-floating">
+										<input type="text" class="form-control form-light" placeholder="Enter your Quotes from clients, managers, or colleagues" value="Enter your Quotes from clients, managers, or colleagues">
+										<label class="profile-label" for="floatingInputInvalid">Quotes from clients, managers, or colleagues</label>
+									  </form>
+									</div>
+								</div>
+								
+							  </div>
+						   <!-- Update button and Reset button -->
+							<div class="btns">
+							  <a href="#" class="update-btn">Update</a>
+							<a href="#" class="clear-btn">Clear</a>
+							</div>                     
+							</div>	
+						</div>
+				  </div>
+				</div>
+			   <!-- Call-to-Action -->
+				<div class="tab-pane fade" id="nav-testimonials" role="tabpanel" aria-labelledby="nav-testimonials-tab">
+					<h2 class="accordion-header d-lg-none" id="headingEleven">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+					  Accordion Item #11
+					</button>
+				  </h2>
+				  <div id="collapseEleven" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingEleven" data-bs-parent="#myTabContent">
+					<div class="accordion-body">
+					  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+					</div>
+				  </div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	  </div>
+</section>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/js/bootstrap-datetimepicker.min.js"></script> -->
+
+<script>
+$('.extra-fields-customer').click(function() {
+  $('.customer_records').clone().appendTo('.customer_records_dynamic');
+  $('.customer_records_dynamic .customer_records').addClass('single remove');
+  $('.single .extra-fields-customer').remove();
+  $('.single').append('<a href="#" class="remove-field btn-remove-customer">Remove Fields</a>');
+  $('.customer_records_dynamic > .single').attr("class", "remove");
+
+  $('.customer_records_dynamic input').each(function() {
+    var count = 0;
+    var fieldname = $(this).attr("name");
+    $(this).attr('name', fieldname + count);
+    count++;
+  });
+
+});
+
+$(document).on('click', '.remove-field', function(e) {
+  $(this).parent('.remove').remove();
+  e.preventDefault();
+});
+
+</script>
+<script src="/layer1x/script.js"></script>
+
+</html>
