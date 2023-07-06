@@ -22,7 +22,7 @@
 <section class="container">
 	<div class="row">
 		<div class="col-lg-3">
-			<ul class="nav nav-tabs d-none d-lg-flex profile-tabs" id="myTab" role="tablist">
+			<ul class="nav nav-tabs d-none d-lg-block profile-tabs" id="myTab" role="tablist">
 				<li class="nav-item" role="presentation">
 				  <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Basic Information</button>
 				  <!-- <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button> -->
@@ -64,7 +64,7 @@
 				<!-- Basic Information section -->
 				<div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">			  
 				  <h2 class="accordion-header d-lg-none" id="headingOne">
-					<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Accordion Item #1</button>
+					<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Basic Information</button>
 				  </h2>
 				  <div id="collapseOne" class="accordion-collapse collapse show  d-lg-block" aria-labelledby="headingOne" data-bs-parent="#myTabContent">
 					<div class="accordion-body">
@@ -79,14 +79,14 @@
 								</form>
 							  </div>
 							  <!-- choose-file -->
-							  <div class="col-lg-6 d-flex">
+							  <div class="col-lg-6 col-md-6">
 								<div class="row choose-file-main">
-								  <div class="col-lg-3">
+								  <div class="col-lg-3 col-md-3 col-sm-2 col-12">
 									<div id="preview">
 									  <img src="/layer1x/assets/images/hero-icon.png" alt="avather" class="img-fluid">
 									</div>
 								  </div>
-								  <div class="col-lg-9 ps-1">
+								  <div class="col-lg-9 col-md-9 col-sm-10 col-12 ps-1">
 									<label class="file">
 									  <span class="choose-label">Profile Picture</span>
 									<input type="file" id="file" accept="image/*" aria-label="File browser">
@@ -96,21 +96,21 @@
 								</div>
 							  </div>
 							  <!-- job-title -->
-							  <div class="col-lg-6">
+							  <div class="col-lg-6 col-md-6">
 								<form class="form-floating">
 								  <input type="email" class="form-control" placeholder="User Interface Designer" value="User Interface Designer">
 								  <label class="profile-label" for="floatingInputInvalid">Job title</label>
 								</form>
 							  </div>
 							  <!-- location -->
-							  <div class="col-lg-6">
+							  <div class="col-lg-6 col-md-6">
 								<form class="form-floating">
 								  <input type="text" class="form-control" placeholder="2118 Thornridge Cir" value="2118 Thornridge Cir">
 								  <label class="profile-label" for="floatingInputInvalid">Location</label>
 								</form>
 							  </div>
 							  <!-- work-status -->
-							  <div class="col-lg-6">
+							  <div class="col-lg-6 col-md-6">
 								<form class="form-floating">
 								  <input type="text" class="form-control" placeholder="Visible to everyone" value="Visible to everyone">
 								  <label class="profile-label" for="floatingInputInvalid">Open to Work Status</label>
@@ -137,7 +137,7 @@
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
 					<h2 class="accordion-header d-lg-none" id="headingTwo">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-					  Accordion Item #2
+						Contact Information
 					</button>
 				  </h2>
 				  <div id="collapseTwo" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingTwo" data-bs-parent="#myTabContent">
@@ -153,14 +153,14 @@
 								</form>
 							  </div>
 							  <!-- Phone number -->
-							  <div class="col-lg-6">
+							  <div class="col-lg-6 col-md-6">
 								<form class="form-floating">
 								  <input type="tel" class="form-control" placeholder="(307) 555-0133" value="(307) 555-0133">
 								  <label class="profile-label" for="floatingInputInvalid">Phone number</label>
 								</form>
 							  </div>
 							  <!-- Personal website -->
-							  <div class="col-lg-6">
+							  <div class="col-lg-6 col-md-6">
 								<form class="form-floating">
 								  <input type="url" class="form-control" placeholder="github.com/jessica.hanson" value="github.com/jessica.hanson">
 								  <label class="profile-label" for="floatingInputInvalid">Personal website or blog</label>
@@ -222,14 +222,15 @@
 						<div class="btns">
 						  <a href="#" class="update-btn">Update</a>
 						<a href="#" class="clear-btn">Clear</a>
-						</div>					</div>
+						</div>
+					</div>
 				  </div>
 				</div>
 				<!-- Skills section -->
                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
 					<h2 class="accordion-header d-lg-none" id="headingThree">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-					  Accordion Item #3
+						Skills
 					</button>
 				  </h2>
 				  <div id="collapseThree" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingThree" data-bs-parent="#myTabContent">
@@ -279,7 +280,7 @@
 				<div class="tab-pane fade" id="nav-work" role="tabpanel" aria-labelledby="nav-work-tab">
 					<h2 class="accordion-header d-lg-none" id="headingFour">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-					  Accordion Item #4
+						Work Experience
 					</button>
 				  </h2>
 				  <div id="collapseFour" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingFour" data-bs-parent="#myTabContent">
@@ -297,14 +298,14 @@
 								  </form>
 								  </div>
 								  <!-- choose-file -->
-								  <div class="col-lg-6 d-flex">
+								  <div class="col-lg-6 col-md-6">
 								  <div class="row choose-file-main">
-									<div class="col-lg-3">
+									<div class="col-lg-3 col-md-3 col-sm-2 col-12">
 									<div id="preview">
 									  <img src="/layer1x/assets/images/picture.png" alt="avather">
 									</div>
 									</div>
-									<div class="col-lg-9 ps-1">
+									<div class="col-lg-9 col-md-9 col-sm-10 col-12 ps-1">
 									<label class="file">
 									  <span class="choose-label">Company Logo</span>
 									<input type="file" id="file" accept="image/*" aria-label="File browser">
@@ -314,7 +315,7 @@
 								  </div>
 								  </div>
 								  <!-- Company name -->
-								  <div class="col-lg-6">
+								  <div class="col-lg-6 col-md-6">
 								  <form class="form-floating">
 									<input type="text" class="form-control" placeholder="Enter your company name" value="Enter your company name">
 									<label class="profile-label" for="floatingInputInvalid">Company name</label>
@@ -328,7 +329,7 @@
 									</form>
 									</div>
 								  <!-- Employment start date -->
-								  <div class="col-lg-6">
+								  <div class="col-lg-6 col-md-6">
 								  <form class="form-floating">
 									<input type="text"  id='startDate' class="form-control" value="28 March 2009" />
 									<span class="calender-icon"><i class="bi bi-calendar"></i></span>
@@ -336,7 +337,7 @@
 								  </form>
 								  </div>
 								  <!-- Employment End date -->
-								  <div class="col-lg-6">
+								  <div class="col-lg-6 col-md-6">
 								  <form class="form-floating">
 									<input type="text"  id='endtDate' class="form-control" value="28 March 2020" />
 									<span class="calender-icon"><i class="bi bi-calendar"></i></span>
@@ -374,7 +375,7 @@
 				<div class="tab-pane fade" id="nav-project" role="tabpanel" aria-labelledby="nav-project-tab">
 					<h2 class="accordion-header d-lg-none" id="headingFive">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-					  Accordion Item #5
+						Projects
 					</button>
 				  </h2>
 				  <div id="collapseFive" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingFive" data-bs-parent="#myTabContent">
@@ -437,7 +438,7 @@
 				<div class="tab-pane fade" id="nav-education" role="tabpanel" aria-labelledby="nav-education-tab">
 					<h2 class="accordion-header d-lg-none" id="headingSix">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-					  Accordion Item #6
+						Education
 					</button>
 				  </h2>
 				  <div id="collapseSix" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingSix" data-bs-parent="#myTabContent">
@@ -462,7 +463,7 @@
 									</form>
 								  </div>
 								  <!-- Graduation date -->
-								  <div class="col-lg-6">
+								  <div class="col-lg-6 col-md-6">
 									<form class="form-floating">
 									  <input type="text"  id='startDate' class="form-control" value="28 March 2009" />
 									  <span class="calender-icon"><i class="bi bi-calendar"></i></span>
@@ -470,7 +471,7 @@
 									</form>
 								  </div>
 									<!--Relevant coursework (optional) -->
-								  <div class="col-lg-6">
+								  <div class="col-lg-6 col-md-6">
 									<form class="form-floating">
 									  <input type="text" class="form-control form-light" placeholder="Enter your Relevant coursework" value="Enter your Relevant coursework">
 									  <label class="profile-label" for="floatingInputInvalid">Relevant coursework (optional)</label>
@@ -494,13 +495,13 @@
 							</div>                     
 							</div>
 						</div>
-				  </div>
+				    </div>
 				</div>
 			  <!-- Awards and Recognitions section -->
 				<div class="tab-pane fade" id="nav-awards" role="tabpanel" aria-labelledby="nav-awards-tab">
 					<h2 class="accordion-header d-lg-none" id="headingSeven">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-					  Accordion Item #7
+						Awards and Recognitions
 					</button>
 				  </h2>
 				  <div id="collapseSeven" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingSeven" data-bs-parent="#myTabContent">
@@ -517,14 +518,14 @@
 								  </form>
 								  </div>
 									<!--Granting organization -->
-								  <div class="col-lg-6">
+								  <div class="col-lg-6 col-md-6">
 									<form class="form-floating">
 									  <input type="text" class="form-control form-light" placeholder="Enter your Granting organization" value="Enter your Granting organization">
 									  <label class="profile-label" for="floatingInputInvalid">Granting organization</label>
 									</form>
 								  </div>
 									<!-- Date received -->
-									<div class="col-lg-6">
+									<div class="col-lg-6 col-md-6">
 									  <form class="form-floating">
 										<input type="text"  id='startDate' class="form-control" value="28 March 2009" />
 										<span class="calender-icon"><i class="bi bi-calendar"></i></span>
@@ -538,8 +539,7 @@
 										<label for="floatingTextarea2">Brief description</label>
 									  </div>
 									</div>
-								</div>
-								
+								</div>								
 							  </div>
 						   <!-- Update button and Reset button -->
 							<div class="btns">
@@ -554,7 +554,7 @@
 				<div class="tab-pane fade" id="nav-publication" role="tabpanel" aria-labelledby="nav-publication-tab">
 					<h2 class="accordion-header d-lg-none" id="headingEight">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-					  Accordion Item #8
+						Publications and Talks
 					</button>
 				  </h2>
 				  <div id="collapseEight" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingEight" data-bs-parent="#myTabContent">
@@ -571,14 +571,14 @@
 								  </form>
 								  </div>
 									<!--Event or journal name -->
-								  <div class="col-lg-6">
+								  <div class="col-lg-6 col-md-6">
 									<form class="form-floating">
 									  <input type="text" class="form-control form-light" placeholder="Enter your Event or journal name" value="Enter your Event or journal name">
 									  <label class="profile-label" for="floatingInputInvalid">Event or journal name</label>
 									</form>
 								  </div>
 									<!-- Date -->
-									<div class="col-lg-6">
+									<div class="col-lg-6 col-md-6">
 									  <form class="form-floating">
 										<input type="text"  id='startDate' class="form-control" value="28 March 2009" />
 										<span class="calender-icon"><i class="bi bi-calendar"></i></span>
@@ -608,7 +608,7 @@
 				<div class="tab-pane fade" id="nav-experience" role="tabpanel" aria-labelledby="nav-experience-tab">
 					<h2 class="accordion-header d-lg-none" id="headingNine">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-					  Accordion Item #9
+						Volunteer Experience
 					</button>
 				  </h2>
 				  <div id="collapseNine" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingNine" data-bs-parent="#myTabContent">
@@ -626,14 +626,14 @@
 								  </form>
 								  </div>  
 									<!--Volunteer role -->
-									<div class="col-lg-6">
+									<div class="col-lg-6 col-md-6">
 									  <form class="form-floating">
 										<input type="text" class="form-control form-light" placeholder="Enter your Volunteer role" value="Enter your Volunteer role">
 										<label class="profile-label" for="floatingInputInvalid">Volunteer role</label>
 									  </form>
 									</div>                   
 								  <!-- Period of involvement -->
-								  <div class="col-lg-6">
+								  <div class="col-lg-6 col-md-6">
 									<form class="form-floating">
 									  <input type="text"  id='startDate' class="form-control" value="28 March 2009" />
 									  <span class="calender-icon"><i class="bi bi-calendar"></i></span>
@@ -671,7 +671,7 @@
 				<div class="tab-pane fade" id="nav-testimonials" role="tabpanel" aria-labelledby="nav-testimonials-tab">
 					<h2 class="accordion-header d-lg-none" id="headingTen">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-					  Accordion Item #10
+						Testimonials
 					</button>
 				  </h2>
 				  <div id="collapseTen" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingTen" data-bs-parent="#myTabContent">
@@ -688,21 +688,21 @@
 								  </form>
 								  </div>
 									<!--Role of the person -->
-								  <div class="col-lg-6">
+								  <div class="col-lg-6 col-md-6">
 									<form class="form-floating">
 									  <input type="text" class="form-control form-light" placeholder="Enter  role of the person providing the testimonial" value="Enter  role of the person providing the testimonial">
 									  <label class="profile-label" for="floatingInputInvalid">Role of the person</label>
 									</form>
 								  </div>
 									<!-- choose-file -->
-								  <div class="col-lg-6 d-flex">
+								  <div class="col-lg-6 col-md-6">
 									<div class="row choose-file-main">
-									  <div class="col-lg-3">
+									  <div class="col-lg-3 col-md-3 col-sm-2 col-12">
 									  <div id="preview">
 										<img src="/layer1x/assets/images/picture.png" alt="avather">
 									  </div>
 									  </div>
-									  <div class="col-lg-9 ps-1">
+									  <div class="col-lg-9 col-md-9 col-sm-10 col-12 ps-1">
 									  <label class="file">
 										<span class="choose-label">Company Logo</span>
 									  <input type="file" id="file" accept="image/*" aria-label="File browser">
@@ -731,10 +731,10 @@
 				  </div>
 				</div>
 			   <!-- Call-to-Action -->
-				<div class="tab-pane fade" id="nav-testimonials" role="tabpanel" aria-labelledby="nav-testimonials-tab">
-					<h2 class="accordion-header d-lg-none" id="headingEleven">
+			   <div class="tab-pane fade" id="nav-call-to-action" role="tabpanel" aria-labelledby="nav-call-to-action-tab">
+				<h2 class="accordion-header d-lg-none" id="headingEleven">
 					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-					  Accordion Item #11
+						Call-to-Action
 					</button>
 				  </h2>
 				  <div id="collapseEleven" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingEleven" data-bs-parent="#myTabContent">

@@ -226,6 +226,15 @@ select
     padding-bottom: 26px;
     border-bottom: 1px solid #D9D9DE;
 }
+.progress-main {
+    display: flex;
+    align-items: center;
+}
+.download-resume {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
 h4 {
     font-family: 'Styrene A LC';
     font-style: normal;
@@ -584,8 +593,8 @@ border-radius: 8px;
 }
 .details-section {
     display: flex;
-    justify-content: space-evenly;
-    padding: 16px 0px;
+    justify-content: space-between;
+    padding: 16px 20px;
     border-radius: 8px;
     background: #FAFBFC;
     margin-top: 33px;
@@ -604,8 +613,8 @@ border-radius: 8px;
     color: #0F172A;margin-bottom: 0px;
 }
 .resume-section {
-    padding: 31PX 24PX;
-    border-radius: 8PX;
+    padding: 31px 24px;
+    border-radius: 8px;
     background: #FFFFFF;
 }
 /* information-section */
@@ -634,12 +643,14 @@ border-radius: 8px;
     color: #808095;
     padding: 10px 12px;
     border-radius: 8px;
+    width: 100%;
 }
 .nav-tabs .nav-link:hover {
     background: #FAFBFC;
     color: #4E1FA3;
 }
 .nav-tabs .nav-link.active {
+    width: 100%;
     background: #FAFBFC;
     color: #4E1FA3;
     font-weight: 600;
@@ -713,6 +724,7 @@ input {
     display: inline-block;
     cursor: pointer;
     height: 58px;
+    width: -webkit-fill-available;
   }
   .file-custom {
     position: absolute;
@@ -920,6 +932,19 @@ input {
         line-height: normal;
         text-decoration: none;
     }
+    .accordion-button:not(.collapsed) {
+        font-size: 16px;
+        font-family: Styrene A LC;
+        font-weight: 600;
+        color: #0E0E2C;
+        border-radius: 10px 10px 0px 0px;
+        box-shadow: none;
+        background-color: #fff;
+    }
+    .accordion-body {
+        border-radius: 0px 0px 10px 10px;
+       background-color: #fff;
+    }
 
 /* responsive sections */
 @media (max-width:1256px) {
@@ -1017,10 +1042,10 @@ input {
    .detail-content h6 {
     font-size: 14px;
    }
-   #preview {
+   /* #preview {
     width: 50px;
     height: 50px;
-   }
+   } */
    .nav-tabs .nav-link {
     font-size: 12px;
     padding: 10px;
@@ -1053,6 +1078,9 @@ input {
         display: block;
         padding: 20px 20px;
     }
+    .user-navbar {
+        display: flex;
+    }
     .logo img {
         width: 70px;
         height: auto;
@@ -1060,8 +1088,14 @@ input {
     .nav-icons {
         margin-top: 25px;
     }
+    .user-nav-icons {
+        margin-top: 0px;
+    }
     .nav-icons a {
         margin-right: 80px;
+    }
+    .user-nav-icons a {
+        margin-right: 40px;
     }
     .event-page {
         font-size: 12px;
@@ -1089,6 +1123,31 @@ input {
     }
     .breadcrumb {
         margin-bottom: 30px;
+    }
+    .accordion-body .main-sub-heading {
+        display: none;
+    }
+    .nav-tab-accordion>.tab-pane {
+        display: block;
+        opacity: 1;
+        margin: 10px 0px;
+    }
+    [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+        border-radius: 10px;
+    }
+    .details-section {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+    .detail-content p,
+    .detail-content h6 {
+        font-size: 12px;
+    }
+    .download-resume {
+        justify-content: space-between;
+    }
+    .performens {
+        gap: 20px;
     }
 }
 @media (max-width:767px) {
@@ -1159,7 +1218,7 @@ input {
         height: auto;
     }
     .event-heading, .events-main a {
-        font-size: 20px;
+        font-size: 18px;
     }
     .event-page {
         margin-bottom: 20px;
@@ -1186,6 +1245,30 @@ input {
     .nav-tabs, .event-main-detail, .common-tags {
         flex-wrap: wrap;
         gap: 20px;
+    }
+    .details-section {
+        display: block;
+    }
+    .detail-content {
+        padding: 10px 0px;
+    }
+    .download-resume .share-btn, .download-resume .resume-btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    .search-bar {
+        padding: 6px 10px 6px 10px;
+    }
+    .search-bar i {
+        font-size: 16px;
+    }
+    .btn img {
+        width: 40px;
+        height: auto;
+    }
+    .nav-icons a {
+        width: 25px;
+        height: auto;
     }
     
 }
@@ -1223,9 +1306,10 @@ input {
     .dropdown-item {
         font-size: 14px;
     }
-    .nav-icons a {
-        width: 25px;
-        height: auto;
+    .user-navbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
     }
     .event-heading {
         font-size: 18px;
@@ -1263,6 +1347,7 @@ input {
     }
     .speaker-section .tag-btns {
         font-size: 12px;
+        padding: 6px 10px;
     }
     .event-right-bar {
         padding-left: 20px;
@@ -1283,16 +1368,62 @@ input {
     .search-bar i {
         font-size: 15px;
     }
-    .btn img {
-        width: 40px;
-        height: auto;
-    }
     .events-main {
         flex-wrap: wrap;
         gap: 15px;
     }
     .events-main {
         padding-top: 15px;
+        padding-bottom: 16px;
+    }
+    .progress-level p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .progress-level p span {
+        font-size: 8px;
+    }
+    .download-resume .share-btn, .download-resume .resume-btn {
+        font-size: 10px;
+        line-height: 20px;
+    }
+    .download-resume .resume-btn {
+        margin-left: 0px;
+    }
+    .progress-main img {
+        margin-right: 15px;
+        width: 50px;
+        height: auto;
+    }
+    .progress {
+        height: 10px;
+    }
+    .breadcrumb-item a {
+        font-size: 14px;
+    }
+    .details-section,
+    .information-section {
+        margin-top: 20px;
+    }
+    .resume-section {
+        padding: 20px;
+    }
+    .information-field {
+        padding: 15px;
+    }
+    .share-btn i {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .instagram-main h6, 
+    .facebook-main h6, 
+    .linked-main h6, 
+    .stack-main h6, 
+    .git-main h6 {
+        font-size: 10px;padding-bottom: 5px;
+    }
+    input::placeholder {
+        font-size: 12px;
     }
 }
 @media (max-width:425px) {
@@ -1395,5 +1526,94 @@ input {
     }
     .breadcrumb-item a {
         font-size: 10px;
+    }
+    .user-nav-icons {
+        margin-top: 0px;
+    }
+    .accordion-button,
+    .accordion-body {
+        padding: 10px;
+    }
+    .share-btn i {
+        font-size: 12px;
+    }
+    .download-resume .share-btn,
+    .download-resume .resume-btn {
+        font-size: 10px;
+        line-height: 17px;
+    }
+    .form-floating>.form-control:not(:placeholder-shown),
+    .detail-content p,
+    .detail-content h6 {
+        font-size: 10px;
+    }
+    .main-information {
+        row-gap: 12px;
+    }
+    .form-floating>.form-control, .form-floating>.form-select {
+        height: calc(3rem + 2px);
+        line-height: 16px;
+    }
+    [type=button]:not(:disabled),
+    [type=reset]:not(:disabled), 
+    [type=submit]:not(:disabled), 
+    button:not(:disabled) {
+        font-size: 14px;
+    }
+    .resume-section {
+        padding: 10px;
+    }
+    .instagram-main h6 i, 
+    .facebook-main h6 i, 
+    .linked-main h6 i, 
+    .stack-main h6 i, 
+    .git-main h6 i {
+        font-size: 14px;
+        margin-right: 3px;
+    }
+    .clear-btn, 
+    .update-btn {
+        font-size: 12px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90px;
+        height: 30px;
+    }
+    .download-resume,
+    .progress-main {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+    .performens {
+        row-gap: 10px;
+    }
+    .bar {
+        padding-top: 0px;
+    }
+    input::placeholder {
+        font-size: 10px;
+    }
+}
+@media (max-width:375px) {
+    .search-bar {
+        width: 200px;
+    }
+    .form-floating>.form-control:not(:placeholder-shown), .detail-content p, .detail-content h6 {
+        font-size: 8px;
+    }
+    .nav-tabs .nav-link {
+        padding: 0;
+    }
+    .events-main a img {
+        width: 25px;
+        height: auto;
+    }
+    .clear-btn, .update-btn {
+        font-size: 10px;
+        width: 80px;
+        height: 26px;
     }
 }
