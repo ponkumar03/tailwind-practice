@@ -143,6 +143,7 @@ select
 .event-main-detail {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 26px 0px;
     border-top: 1px solid #D9D9DE;
     border-bottom: 1px solid #D9D9DE;
@@ -1002,6 +1003,7 @@ input {
         padding: 37px 0px;
         border-top: 1px solid #D9D9DE;
     }
+    .event-details a,
     .applied-main a {
         color: #FFF;
         text-align: center;
@@ -1037,6 +1039,14 @@ input {
     }
     ul {
         margin-bottom: 0px;
+    }
+    .map-location {
+        color: #4E1FA3;
+        font-family: Manrope;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
     }
 /* responsive sections */
 @media (max-width:1256px) {
