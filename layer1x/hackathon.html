@@ -64,8 +64,146 @@
       <section class="banner-section">
                <div class="events-main">
                   <a href="#" class="d-flex align-items-center"><img src="assets/images/left-arrow.png" alt="arrow" class="img-fluid">Back to Hackathon</a>
-                  <a href="#" class="view-btn">View My Projects</a>
+                  <a href="#" type="button" class="btn view-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    View My Projects
+                  </a>
                </div>
+               <!-- Modal Start-->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Team / Project Information</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="information-field">
+                        <div class="row main-information">
+                        <!-- Name -->
+                        <div class="col-lg-6">
+                          <form class="form-floating">
+                            <input type="text" class="form-control" placeholder="Jessica Hanson" value="Jessica Hanson">
+                            <label class="profile-label" for="floatingInputInvalid">1.Name</label>
+                          </form>
+                        </div>
+                          <!-- Email-address -->
+                          <div class="col-lg-6">
+                            <div class="colse-main">
+                              <form class="form-floating">
+                                <input type="email" class="form-control" placeholder="jessica.hanson@blockchain.com " value="jessica.hanson@blockchain.com">
+                                <label class="profile-label" for="floatingInputInvalid">Enter Participant Email</label>
+                              </form>
+                              <a href="#"><i class="bi bi-trash3"></i></a>
+                            </div>
+                          </div>
+                          <!-- Name -->
+                        <div class="col-lg-6">
+                          <form class="form-floating">
+                            <input type="text" class="form-control" placeholder="Willie Jennings" value="Willie Jennings">
+                            <label class="profile-label" for="floatingInputInvalid">2.Name</label>
+                          </form>
+                        </div>
+                          <!-- Email-address -->
+                          <div class="col-lg-6">
+                            <div class="colse-main">
+                              <form class="form-floating">
+                                <input type="email" class="form-control" placeholder="Willie Jennings" value="Willie Jennings">
+                                <label class="profile-label" for="floatingInputInvalid">Enter Participant Email</label>
+                              </form>
+                              <a href="#"><i class="bi bi-trash3"></i></a>
+                            </div>
+                          </div>
+                          <!-- Name -->
+                        <div class="col-lg-6">
+                          <form class="form-floating">
+                            <input type="text" class="form-control" placeholder="Kenzi Lawson" value="Kenzi Lawson">
+                            <label class="profile-label" for="floatingInputInvalid">3.Name</label>
+                          </form>
+                        </div>
+                          <!-- Email-address -->
+                          <div class="col-lg-6">
+                            <div class="colse-main">
+                              <form class="form-floating">
+                                <input type="email" class="form-control" placeholder="kenzi.lawson@blockchain.com" value="kenzi.lawson@blockchain.com">
+                                <label class="profile-label" for="floatingInputInvalid">Enter Participant Email</label>
+                              </form>
+                              <a href="#"><i class="bi bi-trash3"></i></a>
+                            </div>
+                          </div>
+                          <!-- Name -->
+                        <div class="col-lg-6">
+                          <form class="form-floating">
+                            <input type="text" class="form-control" placeholder="Dolores Chambers" value="Dolores Chambers">
+                            <label class="profile-label" for="floatingInputInvalid">4.Name</label>
+                          </form>
+                        </div>
+                          <!-- Email-address -->
+                          <div class="col-lg-6">
+                            <div class="colse-main">
+                              <form class="form-floating">
+                                <input type="email" class="form-control" placeholder="dolores.chambers@blockchain.com" value="dolores.chambers@blockchain.com">
+                                <label class="profile-label" for="floatingInputInvalid">Enter Participant Email</label>
+                              </form>
+                              <a href="#"><i class="bi bi-trash3"></i></a>
+                            </div>
+                          </div>
+                          <div class="col-lg-12">
+                            <a href="#" class="extra-fields-customer">+ Add More Fields</a>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="information-field mt-4">
+                        <div class="row main-information">
+                           <!-- commends -->
+                           <div class="col-lg-12">
+                            <div class="form-floating">
+                              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 80px">The California Art Festival is a showcase of the best and brightest artists from across the state. From painters to sculptors, photographers to performance artists, this festival has it all.</textarea>
+                              <label for="floatingTextarea2">Project Brief</label>
+                            </div>
+                            </div>
+                          <!-- choose-file -->
+                          <div class="col-lg-6 col-md-6">
+                          <div class="row choose-file-main">
+                            <div class="col-lg-12">
+                            <label class="file">
+                              <span class="choose-label">Project Video</span>
+                            <input type="file" id="file" accept="image/*" aria-label="File browser">
+                            <span class="file-custom"></span>
+                            </label>
+                            </div>
+                          </div>
+                          </div>
+                          <!-- choose-file -->
+                          <div class="col-lg-6 col-md-6">
+                            <div class="row choose-file-main">
+                              <div class="col-lg-12">
+                              <label class="file">
+                                <span class="choose-label">Upload Your Code</span>
+                              <input type="file" id="file" accept="image/*" aria-label="File browser">
+                              <span class="file-custom"></span>
+                              </label>
+                              </div>
+                            </div>
+                            </div>
+                         <!-- Email-address -->
+                        <div class="col-lg-12">
+                          <form class="form-floating">
+                            <input type="email" class="form-control" placeholder="https://github.com/jessica/awesome-deep-vision-web-demo" value="https://github.com/jessica/awesome-deep-vision-web-demo">
+                            <label class="profile-label" for="floatingInputInvalid">Link to the project</label>
+                          </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="apply-btn">Apply Now</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Modal End-->
                <!-- <p class="event-page">Dashboard > Events > #23145</p> -->
                <div class="breadcrumb-main">
                 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">

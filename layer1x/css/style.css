@@ -1015,6 +1015,7 @@ input {
         border-radius: 4px;
         background: #4E1FA3;
     }
+    .event-details a:hover,
     .applied-main a:hover {
         background: #fff;
         color: #4E1FA3;
@@ -1047,6 +1048,41 @@ input {
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+    }
+    .modal-header {
+        border-bottom: 0px;
+    }
+    .modal-footer {
+        border-top: 0px;
+    }
+    .apply-btn {
+        font-family: 'Styrene A LC';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 21px;
+        text-align: center;
+        color: #ffffff;
+        padding: 12px 15px;
+        background: #4E1FA3;
+        border: transparent;
+        border-radius: 8px;
+    }
+    .colse-main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .form-floating {
+        width: 100%;
+    }
+    .colse-main a {
+        margin-left: 10px;
+    }
+    .modal-header {
+        padding: 20px 30px;
+    }
+    .modal-header .btn-close {
+        border: 2px solid #555;
     }
 /* responsive sections */
 @media (max-width:1256px) {
