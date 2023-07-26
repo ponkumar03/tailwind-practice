@@ -1,0 +1,249 @@
+
+.user-chat-main-section {
+    display: flex;
+}
+.chat-tab-button {
+    padding: 25px 10px 0px 10px;
+    border-top: 1px solid #D9D9DE;
+    border-right: 1px solid #D9D9DE;
+}
+.chat-tab-button h4 {
+    color: #92929D;
+    font-family: Styrene A LC;
+    font-size: 12px;
+    font-weight: 700;
+}
+.chat-tab-button ul {
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+.chat-tab-button ul .nav-link.active {
+    padding: 9px 18px;
+    background: rgba(78, 31, 163, 0.15);
+    border-radius: 4px;
+    font-weight: 700;
+}
+.nav-tabs .nav-link {
+    font-family: Styrene A LC;
+    color: #171725;
+}
+.chat-tab-button ul .active-link {
+    color: #4E1FA3;
+    font-weight: 700;
+}
+.chat-tab-button ul .nav-item {
+    position: relative;
+}
+.chat-notification {
+    color: #FFF;
+    font-family: Segoe UI;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 2px 12px;
+    background: #4E1FA3;
+    border-radius: 10px;
+    position: absolute;
+    right: 20px;
+    top: 9px;
+}
+.chat-tittle p,
+.profile-images p {
+    margin: 0;
+}
+.profile-images {
+    padding: 0px 24px;
+}
+.detail-btn {
+    display: flex;
+    width: 100px;
+    padding: 8px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #4E1FA3;
+    border: none;
+    border-radius: 8px;
+    background: rgba(78, 31, 163, 0.10);
+}
+.chat-box-main {
+    width: 100%;
+    border-top: 1px solid #D9D9DE;
+    border-right: 1px solid #D9D9DE;
+    background: #fff;
+}
+.chat-box-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 40px;
+    background: #F9F9F9;
+    border: 0px;
+    border: 0px;
+    border-bottom: 1px solid #D9D9DE;
+}
+.chat-profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.accordion-body {
+    padding: 0px;
+}
+.accordion-item {
+    border: 0px;
+}
+.chat-body {
+    padding: 0px 40px;
+}
+.chat-body hr {
+    border: 0px;
+    border-top: 1px solid #D9D9DE;
+    margin: 0px;
+    opacity: 1;
+}
+.chat-body h4 {
+    padding-top: 108px;
+}
+.chat-body span {
+    color: #4E1FA3;
+}
+.chat-1 {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-top: 26px;
+    padding-bottom: 16px;
+}
+.chat-1 img {
+    padding-left: 10px;
+}
+.chat-2 .chat-text h5,
+.chat-1 .chat-text h5 {
+    color: #000;
+    font-family: Styrene A LC;
+    font-size: 14px;
+    font-weight: 500;
+}
+.chat-2 .chat-text span,
+.chat-1 .chat-text span {
+    color: #5F646D;
+    font-family: Styrene A LC;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+.chat-2 .chat-text p,
+.chat-1 .chat-text p {
+    display: inline-block;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    padding: 6px 12px 6px 18px;
+    border-radius: 18px 0px 18px 18px;
+    background: #4E1FA3;
+    margin: 0px;
+}
+.chat-2 .chat-text p {
+    color: #000;
+    background: #F5F5FA;
+    border-radius: 0px 18px 18px 18px;
+}
+.chat-2 {
+    display: flex;
+    align-items: center;
+}
+.chat-2 img {
+    padding-right: 10px;
+}
+.notification-text {
+    text-align: center;
+    margin-top: -15px;
+}
+.notification-text p {
+    color: #808095;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    margin: 0px;
+    padding: 0px 10px;
+    background: #fff;
+}
+.event-main-right-section {
+    padding: 0px;
+}
+.chat-box-footer {
+    margin: 0px 40px;
+    border: 1px solid #D9D9DE;
+    border-radius: 8px;
+}
+.input-group>.form-control {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+}
+.input-group>.form-control::placeholder {
+    color: #A0AEC0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+}
+.input-group-text {
+    padding: 10px 14px;
+    background: none;
+    border: none;
+}
+.send-btn {
+    font-family: Styrene A LC;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    padding: 8px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #4E1FA3;
+}
+.edit-options ul {
+    display: flex;
+    padding: 10px 14px;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    list-style: none;
+    border-radius: 0px 0px 8px 8px;
+    border-top: 1px solid #D9D9DE;
+    background: #F5F5F6;
+}
+.divider {
+    width: 1px;
+    height: 24px;
+    background: #D9D9DE;
+}
+.user-chat-main-section {
+    min-height: 500px;
+}
+.chat-body {
+    max-height: 650px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: calc(100% - 70px - 107px);
+}
+
+
+
+@media (max-width: 991px) {
+    .tab-content>.tab-pane {
+      display: block;
+      opacity: 1;
+    }
+  }
