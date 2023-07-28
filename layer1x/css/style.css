@@ -486,6 +486,7 @@ h4 {
 }
 .event-main-saidbar {
     width: 245px;
+    height: auto;
     background-image: url(/layer1x/assets/images/background-image.png);
     background-position: center;
     background-repeat: no-repeat;
