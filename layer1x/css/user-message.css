@@ -232,28 +232,25 @@
     height: 24px;
     background: #D9D9DE;
 }
-.event-main-right-section {
-    height: 100%;
-}
-.user-chat-box {
-    height: 945px;
-}
-.chat-body {    
-    overflow-y: scroll;
-    overflow-x: hidden;
-    height: calc(100% - 190px);
-}
-
 .event-main-section {
     position: relative;
     display: flex;
-    min-height: 1050px;
+    min-height: 1024px;
     height: 100vh;
 }
-
-@media (max-width: 991px) {
-    .tab-content>.tab-pane {
-      display: block;
-      opacity: 1;
-    }
-  }
+.event-main-right-section {
+    height: 100%;
+}
+.user-chat-main-section {
+    height: calc(100% - 102px);
+}
+.user-chat-box {
+ /* height: calc(100% - 100px); */
+    height: 100vh;
+}
+.chat-body {    
+    /* max-height: 735px; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: calc(100% - 73px - 115px);
+}
