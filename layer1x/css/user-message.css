@@ -28,6 +28,7 @@
 .nav-tabs .nav-link {
     font-family: Styrene A LC;
     color: #171725;
+    font-size: 12px;
 }
 .chat-tab-button ul .active-link {
     color: #4E1FA3;
@@ -70,6 +71,7 @@
 }
 .chat-box-main {
     width: 100%;
+    height: auto;
     border-top: 1px solid #D9D9DE;
     border-right: 1px solid #D9D9DE;
     background: #fff;
@@ -88,12 +90,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-.accordion-body {
-    padding: 0px;
-}
-.accordion-item {
-    border: 0px;
 }
 .chat-body {
     padding: 0px 40px;
@@ -245,12 +241,10 @@
     height: calc(100% - 102px);
 }
 .user-chat-box {
- /* height: calc(100% - 100px); */
     height: 100vh;
 }
 .chat-body {    
-    /* max-height: 735px; */
     overflow-y: scroll;
     overflow-x: hidden;
-    height: calc(100% - 73px - 115px);
+    height: calc(100% - 73px - 216px);
 }
